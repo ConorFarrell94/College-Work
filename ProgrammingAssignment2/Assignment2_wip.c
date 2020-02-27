@@ -4,6 +4,7 @@ Assignment2.c
 
 Author: Conor Farrell
 Text Editor: Atom
+Compiler: GCC for Windows 10
 
 Lotto game program:
 This program will allow a user to
@@ -21,14 +22,16 @@ only use pointer notation to access array elements.
 #include <windows.h>
 
 #define MAXENTRIES 6 // Amount of numbers the user must enter
-#define MAXTOTAL 42; // Maximun valid number
 
 int i, j = 0; // Used in for loops
 int winningNumbers[] = {1,3,5,7,9,11}; // Winning lotto numbers
 int enteredNumbers[MAXENTRIES]; // Array for user selected numbers
+int checkingNumbers[42]; // Array for frequency of numbers
 
 void showNumbers(); // Displays the numbers chosen by the user
-void insertionSort(); // Sort numbers in ascending order
+void insertionSort(int enteredNumbers[]); // Sort numbers in ascending order
+int userInput(); // Get users selection of numbers
+int matchingNumbers(); // Checks users numbers compare to winning numbers
 
 int main()
 {
@@ -49,33 +52,11 @@ int main()
       case 1:
       {
         system("cls");
-        printf("Please enter your 6 numbers:\n");
-        for(i = 0; i < MAXENTRIES; i++)
-        {
-          scanf("%d", &*(enteredNumbers+i));
 
-          // Error checking to prevent duplicates being added
-          for(j = 0; j < i; j++)
-          {
-            if(*(enteredNumbers+i) == *(enteredNumbers+j))
-            {
-              printf("Select a number not already used\n");
-              i--;
-            } // End if
-          } // End for loop that prevents duplicates
+        userInput(); // Calling function userInput to get users selection of numbers
 
-          // Error checking for valid integer entry by user
-          if(*(enteredNumbers+i) <= 0 || *(enteredNumbers+i) > 42) // NEED TO ADD ERROR CHECKING FOR DECIMALS
-          {
-            printf("Invalid entry, please try again\n");
-            getchar(); // Prevents invalid entry from continuously showing
-            i--; // Removes the invalid entry
-          } // End error checking loop
-
-        } // End user input for loop
-
-      system("cls");
-      break;
+        system("cls");
+        break;
 
       } // End case 1
 
@@ -84,7 +65,7 @@ int main()
       {
         system("cls");
 
-        showNumbers();
+        showNumbers(); // Function to display users chosen numbers
 
         Sleep(1500);
         system("cls");
@@ -97,44 +78,7 @@ int main()
       {
         system("cls");
 
-        int matching = 0;
-
-        for(i = 0; i < MAXENTRIES; i++)
-        {
-          for(j = 0; j < MAXENTRIES; j++)
-          {
-            if(*(enteredNumbers+i) == *(winningNumbers+j))
-            {
-              matching = matching + 1;
-            }
-          }
-        }
-
-        if(matching == 6)
-        {
-          printf("You have 6 matching numbers\n");
-          printf("Congratulations, you've won the jackpot!\n");
-        }
-        if(matching == 5)
-        {
-          printf("You have 5 matching numbers\n");
-          printf("Congratulations, you've won a new car\n");
-        }
-        if(matching == 4)
-        {
-          printf("You have 4 matching numbers\n");
-          printf("You've won a weekend away!\n");
-        }
-        if(matching == 3)
-        {
-          printf("You have 3 matching numbers\n");
-          printf("You've won a cinema pass!\n");
-        }
-        if(matching < 3)
-        {
-          printf("You have less than 3 matching numbers\n");
-          printf("Tough luck\n");
-        }
+        matchingNumbers(); // Checks users numbers in comparison to winning numbers
 
         Sleep(1500);
         system("cls");
@@ -145,13 +89,23 @@ int main()
     // 4. Frequency of numbers
       case 4:
       {
+        for(i = 0; i < 42; i++)
+        {
+          if(*(checkingNumbers+i) != 0)
+          {
+            printf("%d has been entered %d times\n", i, *(checkingNumbers+i));
+          }
+        }
 
+      Sleep(3000);
+      system("cls");
+      break;
       } // End case 4
 
     // 5. Sort your numbers
       case 5:
       {
-        insertionSort(enteredNumbers);
+        insertionSort(enteredNumbers); // Call function to sort numbers in ascending order
 
         system("cls");
 
@@ -189,6 +143,9 @@ int main()
 
   } // End while exit == 0
 
+  getchar();
+  return 0;
+
 } // End main()
 
 void showNumbers()
@@ -217,4 +174,82 @@ void insertionSort(int enteredNumbers[])
 
         *(enteredNumbers+j+1) = key;
     }
+}
+
+int userInput()
+{
+  printf("Please enter your 6 numbers:\n");
+  for(i = 0; i < MAXENTRIES; i++)
+  {
+    scanf("%d", &*(enteredNumbers+i));
+    // If a decimal is entered this getchar and flushall disregards the decimal value
+    getchar();
+    _flushall();
+
+    // Error checking to prevent duplicates being added
+    for(j = 0; j < i; j++)
+    {
+      if(*(enteredNumbers+i) == *(enteredNumbers+j))
+      {
+        printf("Select a number not already used\n");
+        i--; // Removes the duplicate entry
+      } // End if
+    } // End for loop that prevents duplicates
+
+    // Error checking for valid integer entry by user
+    if(*(enteredNumbers+i) <= 0 || *(enteredNumbers+i) > 42) // NEED TO ADD ERROR CHECKING FOR DECIMALS
+    {
+      printf("Invalid entry, please try again\n");
+      getchar(); // Prevents invalid entry from continuously showing
+      i--; // Removes the invalid entry
+      *(checkingNumbers+*(enteredNumbers+i)) = *(checkingNumbers+*(enteredNumbers+i)) - 1;
+    } // End error checking loop
+    else
+    {
+       *(checkingNumbers+*(enteredNumbers+i)) = *(checkingNumbers+*(enteredNumbers+i)) + 1;
+    }
+
+  } // End user input for loop
+}
+
+int matchingNumbers()
+{
+  int matching = 0;
+
+  for(i = 0; i < MAXENTRIES; i++)
+  {
+    for(j = 0; j < MAXENTRIES; j++)
+    {
+      if(*(enteredNumbers+i) == *(winningNumbers+j))
+      {
+        matching = matching + 1;
+      }
+    }
+  }
+
+  if(matching == 6)
+  {
+    printf("You have 6 matching numbers\n");
+    printf("Congratulations, you've won the jackpot!\n");
+  }
+  if(matching == 5)
+  {
+    printf("You have 5 matching numbers\n");
+    printf("Congratulations, you've won a new car\n");
+  }
+  if(matching == 4)
+  {
+    printf("You have 4 matching numbers\n");
+    printf("You've won a weekend away!\n");
+  }
+  if(matching == 3)
+  {
+    printf("You have 3 matching numbers\n");
+    printf("You've won a cinema pass!\n");
+  }
+  if(matching < 3)
+  {
+    printf("You have less than 3 matching numbers\n");
+    printf("Tough luck\n");
+  }
 }
