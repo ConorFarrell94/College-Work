@@ -18,7 +18,6 @@ only use pointer notation to access array elements.
 */
 
 #include <stdio.h>
-#include <math.h>
 #include <windows.h>
 
 #define MAXENTRIES 6 // Amount of numbers the user must enter
@@ -35,11 +34,13 @@ int matchingNumbers(); // Checks users numbers compare to winning numbers
 
 int main()
 {
-  int initialSelection = 0;
+  int initialSelection;
   int exit = 0;
 
   while (exit == 0)
   {
+    int flag; // Enables the ability to check whether option 1 has been selected
+
     // Main menu
     printf("1. Select your numbers\n2. Show numbers\n");
     printf("3. Compare to winning numbers\n4. Frequency of numbers\n");
@@ -51,6 +52,7 @@ int main()
     // 1. Select your numbers
       case 1:
       {
+        flag = 1;
         system("cls");
 
         userInput(); // Calling function userInput to get users selection of numbers
@@ -63,63 +65,110 @@ int main()
     // 2. Show your numbers
       case 2:
       {
-        system("cls");
+        if(flag == 1)
+        {
+          system("cls");
 
-        showNumbers(); // Function to display users chosen numbers
+          showNumbers(); // Function to display users chosen numbers
 
-        Sleep(1500);
-        system("cls");
+          Sleep(1500);
+          system("cls");
 
-        break;
+          break;
+        }
+        else
+        {
+          system("cls");
+          printf("You must select option 1 first\n");
+
+          Sleep(1500);
+          system("cls");
+          break;
+        }
       } // End case 2
 
     // 3. Compare to winning numbers
       case 3:
       {
-        system("cls");
+        if(flag == 1)
+        {
+          system("cls");
 
-        matchingNumbers(); // Checks users numbers in comparison to winning numbers
+          matchingNumbers(); // Checks users numbers in comparison to winning numbers
 
-        Sleep(1500);
-        system("cls");
+          Sleep(1500);
+          system("cls");
 
-        break;
+          break;
+        }
+        else
+        {
+          system("cls");
+          printf("You must select option 1 first\n");
+
+          Sleep(1500);
+          system("cls");
+          break;
+        }
       } // End case 3
 
     // 4. Frequency of numbers
       case 4:
       {
-        for(i = 0; i < 42; i++)
+        if(flag == 1)
         {
-          if(*(checkingNumbers+i) != 0)
+          for(i = 0; i < 42; i++)
           {
-            printf("%d has been entered %d times\n", i, *(checkingNumbers+i));
+            if(*(checkingNumbers+i) != 0)
+            {
+              printf("%d has been entered %d times\n", i, *(checkingNumbers+i));
+            }
           }
+        Sleep(3000);
+        system("cls");
+        break;
         }
+        else
+        {
+          system("cls");
+          printf("You must select option 1 first\n");
 
-      Sleep(3000);
-      system("cls");
-      break;
+          Sleep(1500);
+          system("cls");
+          break;
+        }
       } // End case 4
 
     // 5. Sort your numbers
       case 5:
       {
-        insertionSort(enteredNumbers); // Call function to sort numbers in ascending order
-
-        system("cls");
-
-        printf("Your numbers in ascending order are: ");
-
-        for(i = 0; i < MAXENTRIES; i++)
+        if(flag == 1)
         {
-          printf(" %d ", *(enteredNumbers+i));
+          insertionSort(enteredNumbers); // Call function to sort numbers in ascending order
+
+          system("cls");
+
+          printf("Your numbers in ascending order are: ");
+
+          for(i = 0; i < MAXENTRIES; i++)
+          {
+            printf(" %d ", *(enteredNumbers+i));
+          }
+
+          Sleep(1500);
+          system("cls");
+
+          break;
         }
+        else
+        {
+          system("cls");
+          printf("You must select option 1 first\n");
 
-        Sleep(1500);
-        system("cls");
-
-        break;
+          Sleep(1500);
+          system("cls");
+          break;
+        }
       } // End case 5
 
     // 6. Exit
@@ -250,6 +299,6 @@ int matchingNumbers()
   if(matching < 3)
   {
     printf("You have less than 3 matching numbers\n");
-    printf("Tough luck\n");
+    printf("Tough luck!\n");
   }
 }
