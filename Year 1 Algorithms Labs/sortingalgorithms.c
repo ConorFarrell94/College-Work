@@ -44,13 +44,13 @@ int main()
   printf("\nArray 1 sorted: ");
   for(i = 0; i < AMOUNT; i++)
   {
-    printf("%d", arr1[i]);
+    printf("%d ", arr1[i]);
   }
 
   printf("\nArray 2 sorted: ");
   for(i = 0; i < AMOUNT; i++)
   {
-    printf("%d", arr2[i]);
+    printf("%d ", arr2[i]);
   }
 
   for(i = 0; i < AMOUNT; i++)
@@ -68,7 +68,7 @@ int main()
   printf("\nArrays merged and sorted: ");
   for(i = 0; i < MERGED; i++)
   {
-    printf("%d", arr3[i]);
+    printf("%d ", arr3[i]);
   }
 
   t=clock() - t;
