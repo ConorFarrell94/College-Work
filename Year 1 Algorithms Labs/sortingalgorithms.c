@@ -14,8 +14,7 @@ int i, j = 0;
 double t;
 double time_taken;
 
-void insertionSort(int arr1[]);
-void insertionSort(int arr2[]);
+void insertionSort(int arr[], int num);
 
 int arr1[AMOUNT];
 int arr2[AMOUNT];
@@ -29,7 +28,7 @@ int main()
     scanf("%d", &arr1[i]);
   }
 
-  insertionSort(arr1);
+  insertionSort(arr1, AMOUNT);
 
   printf("Enter 5 numbers for second array:\n");
   for(i = 0; i < AMOUNT; i++)
@@ -39,7 +38,7 @@ int main()
 
   t = clock();
 
-  insertionSort(arr2);
+  insertionSort(arr2, AMOUNT);
 
   printf("\nArray 1 sorted: ");
   for(i = 0; i < AMOUNT; i++)
@@ -63,7 +62,7 @@ int main()
     arr3[j] = arr2[i];
   }
 
-  insertionSort(arr3);
+  insertionSort(arr3, MERGED);
 
   printf("\nArrays merged and sorted: ");
   for(i = 0; i < MERGED; i++)
@@ -78,11 +77,11 @@ int main()
 
 } // End main()
 
-void insertionSort(int array[])
+void insertionSort(int array[], int num)
 {
     int key;
 
-    for (i = 1; i < AMOUNT; i++)
+    for (i = 1; i < num; i++)
     {
         key = *(array+i);
         j = i - 1;
