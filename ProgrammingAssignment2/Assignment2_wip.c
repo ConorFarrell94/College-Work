@@ -29,8 +29,8 @@ int checkingNumbers[42]; // Array for frequency of numbers
 
 void showNumbers(); // Displays the numbers chosen by the user
 void insertionSort(int enteredNumbers[]); // Sort numbers in ascending order
-int userInput(); // Get users selection of numbers
-int matchingNumbers(); // Checks users numbers compare to winning numbers
+void userInput(); // Get users selection of numbers
+void matchingNumbers(); // Checks users numbers compare to winning numbers
 
 int main()
 {
@@ -225,7 +225,7 @@ void insertionSort(int enteredNumbers[])
     }
 }
 
-int userInput()
+void userInput()
 {
   printf("Please enter your 6 numbers:\n");
   for(i = 0; i < MAXENTRIES; i++)
@@ -261,7 +261,7 @@ int userInput()
   } // End user input for loop
 }
 
-int matchingNumbers()
+void matchingNumbers()
 {
   int matching = 0;
 
