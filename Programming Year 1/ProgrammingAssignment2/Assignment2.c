@@ -36,6 +36,7 @@ int main()
 {
   int initialSelection;
   int exit = 0;
+  char confirm;
 
   while (exit == 0)
   {
@@ -43,9 +44,9 @@ int main()
     int flag;
 
     // Main menu
-    printf("1. Select your numbers\n2. Show numbers\n");
-    printf("3. Compare to winning numbers\n4. Frequency of numbers\n");
-    printf("5. Sort your numbers\n6. Exit\n");
+    printf("1. Select your numbers\n\n2. Show numbers\n\n");
+    printf("3. Compare to winning numbers\n\n4. Frequency of numbers\n\n");
+    printf("5. Sort your numbers\n\n6. Exit\n\n");
     scanf("%d", &initialSelection);
 
     switch(initialSelection)
@@ -56,7 +57,8 @@ int main()
         flag = 1;
         system("cls");
 
-        userInput(); // Calling function userInput to get users selection of numbers
+        // Calling function userInput to get users selection of numbers
+        userInput();
 
         system("cls");
         break;
@@ -70,7 +72,8 @@ int main()
         {
           system("cls");
 
-          showNumbers(); // Function to display users chosen numbers
+          // Function to display users chosen numbers
+          showNumbers();
 
           Sleep(1500);
           system("cls");
@@ -179,8 +182,20 @@ int main()
     // 6. Exit
       case 6:
       {
-        exit = 1;
-        break;
+        system("cls");
+        // Confirm that user wants to exit
+        printf("Exit program? (y/n)\n");
+        scanf("%1s", &confirm);
+        if(confirm == 'y')
+        {
+          exit = 1;
+          break;
+        }
+        else
+        {
+          system("cls");
+          break;
+        }
       } // End case 6
 
     default:
@@ -262,7 +277,6 @@ void userInput()
       getchar();
       // Removes the invalid entry
       i--;
-      *(checkingNumbers+*(enteredNumbers+i)) = *(checkingNumbers+*(enteredNumbers+i)) - 1;
     } // End error checking loop
     else
     {
@@ -277,12 +291,17 @@ void matchingNumbers()
 {
   int matching = 0;
 
-  for(i = 0, j = 0; i < MAXENTRIES, j < MAXENTRIES; i++, j++)
+  for(i = 0; i < MAXENTRIES; i++)
   {
+    for(j = 0; j < MAXENTRIES; j++)
+    {
       if(*(enteredNumbers+i) == *(winningNumbers+j))
       {
+        // Uncomment this if you want to display which numbers were matched
+        // printf("%d is matching\n", enteredNumbers[i]);
         matching = matching + 1;
       }
+    }
   }
 
   if(matching == 6)
