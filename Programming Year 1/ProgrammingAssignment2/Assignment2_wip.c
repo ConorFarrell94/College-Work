@@ -39,7 +39,8 @@ int main()
 
   while (exit == 0)
   {
-    int flag; // Enables the ability to check whether option 1 has been selected
+    // This flag enables the ability to check whether option 1 has been selected
+    int flag;
 
     // Main menu
     printf("1. Select your numbers\n2. Show numbers\n");
@@ -78,6 +79,8 @@ int main()
         }
         else
         {
+          /* This else statement is in all cases in order to ensure option 1
+          is selected first */
           system("cls");
           printf("You must select option 1 first\n");
 
@@ -94,7 +97,8 @@ int main()
         {
           system("cls");
 
-          matchingNumbers(); // Checks users numbers in comparison to winning numbers
+          // Checks users numbers in comparison to winning numbers
+          matchingNumbers();
 
           Sleep(1500);
           system("cls");
@@ -144,7 +148,8 @@ int main()
       {
         if(flag == 1)
         {
-          insertionSort(enteredNumbers); // Call function to sort numbers in ascending order
+          // Call function to sort numbers in ascending order
+          insertionSort(enteredNumbers);
 
           system("cls");
 
@@ -197,6 +202,7 @@ int main()
 
 } // End main()
 
+// Print the user entered numbers
 void showNumbers()
 {
   printf("Your chosen numbers are:\n");
@@ -204,8 +210,9 @@ void showNumbers()
   {
     printf("%d ", *(enteredNumbers+i));
   }
-}
+} // End showNumbers()
 
+// Sort numbers in ascending order
 void insertionSort(int enteredNumbers[])
 {
     int key;
@@ -223,14 +230,16 @@ void insertionSort(int enteredNumbers[])
 
         *(enteredNumbers+j+1) = key;
     }
-}
+} // End insertionSort()
 
+// Get users input and put into an array
 void userInput()
 {
   printf("Please enter your 6 numbers:\n");
   for(i = 0; i < MAXENTRIES; i++)
   {
     scanf("%d", &*(enteredNumbers+i));
+
     // If a decimal is entered this getchar and flushall disregards the decimal value
     getchar();
     _flushall();
@@ -246,11 +255,13 @@ void userInput()
     } // End for loop that prevents duplicates
 
     // Error checking for valid integer entry by user
-    if(*(enteredNumbers+i) <= 0 || *(enteredNumbers+i) > 42) // NEED TO ADD ERROR CHECKING FOR DECIMALS
+    if(*(enteredNumbers+i) <= 0 || *(enteredNumbers+i) > 42)
     {
       printf("Invalid entry, please try again\n");
-      getchar(); // Prevents invalid entry from continuously showing
-      i--; // Removes the invalid entry
+      // Prevents invalid entry from continuously showing
+      getchar();
+      // Removes the invalid entry
+      i--;
       *(checkingNumbers+*(enteredNumbers+i)) = *(checkingNumbers+*(enteredNumbers+i)) - 1;
     } // End error checking loop
     else
@@ -259,8 +270,9 @@ void userInput()
     }
 
   } // End user input for loop
-}
+} // End userInput()
 
+// Checks enteredNumbers against winningNumbers and prints relative message
 void matchingNumbers()
 {
   int matching = 0;
@@ -298,4 +310,4 @@ void matchingNumbers()
     printf("You have less than 3 matching numbers\n");
     printf("Tough luck!\n");
   }
-}
+} // End matchingNumbers()
