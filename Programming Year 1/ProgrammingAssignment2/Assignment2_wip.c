@@ -148,7 +148,7 @@ int main()
 
           system("cls");
 
-          printf("Your numbers in ascending order are: ");
+          printf("Your numbers in ascending order are:\n");
 
           for(i = 0; i < MAXENTRIES; i++)
           {
@@ -265,15 +265,12 @@ void matchingNumbers()
 {
   int matching = 0;
 
-  for(i = 0; i < MAXENTRIES; i++)
+  for(i = 0, j = 0; i < MAXENTRIES, j < MAXENTRIES; i++, j++)
   {
-    for(j = 0; j < MAXENTRIES; j++)
-    {
       if(*(enteredNumbers+i) == *(winningNumbers+j))
       {
         matching = matching + 1;
       }
-    }
   }
 
   if(matching == 6)
