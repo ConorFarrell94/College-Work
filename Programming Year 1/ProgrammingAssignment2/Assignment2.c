@@ -122,6 +122,7 @@ int main()
     // 4. Frequency of numbers
       case 4:
       {
+        system("cls");
         if(flag == 1)
         {
           for(i = 0; i < 42; i++)
