@@ -1,78 +1,106 @@
 /*
 
-Author: Conor Farrell
+Author: Conor Farrayell
 Editor: Atom for Windows 10
 
 Closest pair (in one dimension).
-Write a program that, given an array a[] of N double values,
-finds a closest pair : two values whose difference is no greater
-than the difference of any other pair (in absolute value).
+Write a program that, given an arrayay a[] of N double values,
+finds a closest pair : two values whose differenceerence is no greater
+than the differenceerence of any other pair (in absolute value).
 
 */
 
-
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
-int number = 5;
-double d = 0;
-int counter = 0;
-int i, j;
+#define ENTRIES 100
+#define MAXIMUM 1000
 
-double calculations();
+void calculations(double[ENTRIES]);
+
+int i, j = 0;
+double lowest = 0;
+double highest = 0;
+double difference = ENTRIES;
 
 int main()
 {
 
-  double a[number];
+  double array[ENTRIES];
 
-  printf("Enter %d number(s):\n", number);
+  srand(time(0));
 
-  for (i = 0; i < number; i ++)
-  {
-      scanf("%lf", &a[i]);
-  }
+  calculations(array);
 
-  double calculations(double a[]);
+  printf("Highest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
 
-  printf("Smallest difference is between %2.2f and %2.2lf and it is %2.2lf",a[counter+1], a[counter], a[counter+1] - a[counter]);
+  getchar();
+  return 0;
 
 } // End main()
 
-double calculations(double a[])
+void calculations(double array[])
 {
 
-  for (i = 0; i < number; i ++)
+  for (i = 0; i < ENTRIES; i ++)
   {
-      for (j = i + 1; j < number; j ++) {
-          if (a[i] > a[j])
+
+    array[i] = rand()%MAXIMUM; // Assigns random values in the array
+
+  }
+
+  // Determining the difference
+  for(i = 0; i < ENTRIES; i ++)
+  {
+
+    for(j = 0; j < ENTRIES; j ++)
+    {
+
+      if(array[i] - array[j] >= 0)
+      {
+
+        if(array[i] - array[j] < difference)
+        {
+
+          difference = array[i] - array[j];
+          highest = array[i];
+          lowest = array[j];
+
+        }
+
+        else if(array[j] - array[i] >= 0)
+        {
+
+          if(array[j] - array[i] < difference)
           {
-              d = a[i];
-              a[i] = a[j];
-              a[j] = d;
+
+            difference = array[j] - array[i];
+            highest = array[j];
+            lowest = array[i];
+
           }
+
+        }
+
       }
-  };
 
-  if (((a[4] - a[3]) < (a[3] - a[2])) && ((a[4] - a[3]) < (a[2] - a[1])) && ((a[4] - a[3]) < (a[1] - a[0])))
-  {
-      counter = 3;
+      else if(array[j] - array[i] >= 0)
+      {
+
+        if(array[j] - array[i] < difference)
+        {
+
+          difference = array[j] - array[i];
+          highest = array[j];
+          lowest = array[i];
+
+        }
+
+      }
+
+    }
+
   }
-
-  else if (((a[4] - a[3]) > (a[3] - a[2])) && ((a[3] - a[2]) < (a[2] - a[1])) && ((a[3] - a[1]) < (a[1] - a[0])))
-  {
-      counter = 2;
-  }
-
-  else if (((a[4] - a[3]) > (a[2] - a[1])) && ((a[4] - a[3]) > (a[2] - a[1])) && ((a[2] - a[1]) < (a[1] - a[0])))
-  {
-      counter = 1;
-  }
-
-  else if (((a[1] - a[0]) < (a[3] - a[2])) && ((a[1] - a[0]) < (a[2] - a[1])) && ((a[4] - a[3]) > (a[1] - a[0])))
-  {
-      counter = 0;
-  }
-
-  printf("Smallest difference is between %lf and %lf and it is %lf\n",a[counter+1], a[counter], a[counter+1] - a[counter]);
 
 } // End calculations()

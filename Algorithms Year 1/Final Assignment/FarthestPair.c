@@ -11,43 +11,72 @@ the difference of any other pair (in absolute value).
 */
 
 #include <stdio.h>
+#include <time.h>
+#include <stdlib.h>
 
-int number = 5;
-int i, j;
-double d = 0;
+#define ENTRIES 100
+#define MAXIMUM 1000
 
-double calculations();
+void calculations(double[ENTRIES]);
+
+int i, j = 0;
+double lowest = 0;
+double highest = 0;
+double difference = ENTRIES;
 
 int main()
 {
 
-  double a[number];
+  double array[ENTRIES];
 
-  printf("Enter %d number(s):\n", number);
+  srand(time(0));
 
-  for (i = 0; i < number; i ++)
-  {
-      scanf("%lf", &a[i]);
-  }
+  calculations(array);
 
-  double calculations(double a[]);
+  printf("Highest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
 
-  printf("The biggest difference is between %2.2lf and %2.2lf and it is %2.2lf\n",a[0], a[number-1], a[number-1] - a[0]);
+  getchar();
+  return 0;
 
 } // End main()
 
-double calculations(double a[])
+void calculations(double array[])
 {
-  for (i = 0; i < number; i ++)
+
+  for ( i = 0; i < ENTRIES; i ++)
   {
-      for (j = i + 1; j < number; j ++)
-      {
-          if (a[i] > a[j])
-          {
-              d = a[i];
-              a[i] = a[j];
-              a[j] = d;
-          }
-      }
+
+    array[i] = rand()%MAXIMUM; // Assigns random values in the array
+
   }
-}
+
+  // Determining the difference
+  for(i = 0; i < ENTRIES; i ++)
+  {
+
+    for(j = 0; j < ENTRIES; j ++)
+    {
+
+      if(array[i] - array[j] > difference)
+      {
+
+        difference = array[i] - array[j];
+        highest = array[i];
+        lowest = array[j];
+
+      }
+
+      else if(array[j] - array[i] > difference)
+      {
+
+        difference = array[j] - array[i];
+        highest = array[j];
+        lowest = array[i];
+
+      }
+
+    }
+
+  }
+
+} // End calculations()
