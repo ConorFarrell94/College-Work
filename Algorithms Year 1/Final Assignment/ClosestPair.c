@@ -27,13 +27,15 @@ double difference = ENTRIES;
 int main()
 {
 
+  printf("Closest Pair:\n");
+
   double array[ENTRIES];
 
   srand(time(0));
 
   calculations(array);
 
-  printf("Highest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
+  printf("\nHighest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
 
   getchar();
   return 0;
