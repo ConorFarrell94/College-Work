@@ -1,6 +1,6 @@
 /*
 
-Author: Conor Farrayell
+Author: Conor Farrell
 Editor: Atom for Windows 10
 
 Closest pair (in one dimension).
