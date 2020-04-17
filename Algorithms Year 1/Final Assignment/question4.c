@@ -60,7 +60,7 @@ int main()
   for (i = location - 1; i < entries - 1; i ++)
   {
 
-    array[i] = array[i+1];
+    array[i] = array[i + 1];
 
   }
 
@@ -81,21 +81,21 @@ void insertionSort(int array[], int entries)
 {
     int key;
 
-    for (i = 1; i < entries; i++)
+    for (i = 1; i < entries; i ++)
     {
 
-        key = *(array+i);
+        key = *(array + i);
         j = i - 1;
 
-        while (j >= 0 && *(array+j) > key)
+        while (j >= 0 && *(array + j) > key)
         {
 
-          *(array+j+1) = *(array+j);
+          *(array + j + 1) = *(array + j);
           j = j - 1;
 
         }
 
-        *(array+j+1) = key;
+        *(array + j + 1) = key;
 
     }
 
