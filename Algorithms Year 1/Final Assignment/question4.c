@@ -19,6 +19,8 @@ takes does not depend on the array’s size n
 void insertionSort(int array[], int entries);
 
 int i, j = 0;
+double t;
+double time_taken;
 
 int main()
 {
@@ -31,6 +33,8 @@ int main()
   scanf("%d", &entries);
 
   int array[entries];
+
+  t = clock();
 
   for (i = 0; i < entries; i ++)
   {
@@ -74,6 +78,12 @@ int main()
     printf("Element %d is: %d\n", i, array[i]);
 
   }
+
+  t=clock() - t;
+  
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
+
+  printf("\nTime taken: %lf", time_taken);
 
 } // End main()
 

@@ -23,6 +23,8 @@ int i, j = 0;
 double lowest = 0;
 double highest = 0;
 double difference = ENTRIES;
+double t;
+double time_taken;
 
 int main()
 {
@@ -44,6 +46,7 @@ int main()
 
 void calculations(double array[])
 {
+  t = clock();
 
   for ( i = 0; i < ENTRIES; i ++)
   {
@@ -80,5 +83,11 @@ void calculations(double array[])
     }
 
   }
+
+  t=clock() - t;
+  
+  time_taken = ((double)t)/CLOCKS_PER_SEC;
+
+  printf("\nTime taken: %lf", time_taken);
 
 } // End calculations()
