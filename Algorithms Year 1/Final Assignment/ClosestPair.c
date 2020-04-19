@@ -13,16 +13,17 @@ than the differenceerence of any other pair (in absolute value).
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <math.h>
 
-#define ENTRIES 100
-#define MAXIMUM 1000
+#define ENTRIES 10
+#define MAXIMUM 100
 
 void calculations(double[ENTRIES]);
 
 int i, j = 0;
 double lowest = 0;
 double highest = 0;
-double difference = ENTRIES;
+double difference = 0;
 double t;
 double time_taken;
 
@@ -36,6 +37,15 @@ int main()
   srand(time(0));
 
   calculations(array);
+
+  printf("\nArray values are:\n");
+
+  for ( i = 0; i < ENTRIES; i ++)
+  {
+
+    printf("%.2f\n", array[i]);
+
+  }
 
   printf("\nHighest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
 
@@ -63,7 +73,7 @@ void calculations(double array[])
     for(j = 0; j < ENTRIES; j ++)
     {
 
-      if(array[i] - array[j] >= 0)
+      if(i != j && array[i] - array[j] >= 0)
       {
 
         if(array[i] - array[j] < difference)
@@ -75,7 +85,7 @@ void calculations(double array[])
 
         }
 
-        else if(array[j] - array[i] >= 0)
+        else if(i != j && array[j] - array[i] >= 0)
         {
 
           if(array[j] - array[i] < difference)
@@ -91,7 +101,7 @@ void calculations(double array[])
 
       }
 
-      else if(array[j] - array[i] >= 0)
+      else if(i != j && array[j] - array[i] >= 0)
       {
 
         if(array[j] - array[i] < difference)
@@ -110,7 +120,7 @@ void calculations(double array[])
   }
 
   t=clock() - t;
-  
+
   time_taken = ((double)t)/CLOCKS_PER_SEC;
 
   printf("\nTime taken: %lf", time_taken);

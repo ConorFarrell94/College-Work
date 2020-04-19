@@ -80,7 +80,7 @@ int main()
   }
 
   t=clock() - t;
-  
+
   time_taken = ((double)t)/CLOCKS_PER_SEC;
 
   printf("\nTime taken: %lf", time_taken);

@@ -37,6 +37,15 @@ int main()
 
   calculations(array);
 
+  printf("\nArray values are:\n");
+
+  for ( i = 0; i < ENTRIES; i ++)
+  {
+
+    printf("%.2f\n", array[i]);
+
+  }
+
   printf("\nHighest value is: %.2f\nLowest value is: %.2f\nDifference is: %.2f", highest, lowest, difference);
 
   getchar();
@@ -85,7 +94,7 @@ void calculations(double array[])
   }
 
   t=clock() - t;
-  
+
   time_taken = ((double)t)/CLOCKS_PER_SEC;
 
   printf("\nTime taken: %lf", time_taken);
