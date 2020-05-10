@@ -161,14 +161,16 @@ int main()
           system("cls"); // For some reason this clear screen wasn't working for me and I can't figure out why
 
           printf("Are you sure? (y/n)\n");
-          scanf("%c", &exit_choice);
+          scanf("%1s", &exit_choice);
 
           if(exit_choice == 'y' || exit_choice == 'Y')
           {
             exit = 1;
+            break;
           }
           else
           {
+            system("cls");
             break;
           }
       default:
