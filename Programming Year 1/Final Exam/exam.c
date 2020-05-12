@@ -1,7 +1,7 @@
 /*
 
 Author: Conor Farrell
-Last changes made on: 30/04/20
+Last changes made on: 10/05/20
 Written in Atom for Windows 10 and compiled using GCC
 
 This is a program designed to allow the end user to decide whether to manually
