@@ -1,4 +1,5 @@
 import random
+import re
 
 """
 data holder - good code design wont couple data layer classes with input mechanisms
@@ -97,10 +98,10 @@ class ShoppingCart():
     def cart_get(self): # returns whats in my_cart
         return self.my_cart
 
-    def cart_add(self, ID): # adds item to cart from the ID value
+    def cart_add(self, ID): # adds item to cart based on the ID value
         self.my_cart[ID] += 1
 
-    def cart_remove(self, ID): # removes item from cart from the ID value
+    def cart_remove(self, ID): # removes item from cart based on the ID value
         self.my_cart[ID] -= 1
 
     def __str__(self):
@@ -133,14 +134,15 @@ def get_customer():
     if ShopperType == '1':
         customer = LoyalCustomers(firstname, surname)
         print("-" * 25)
-        print("Welcome", customer.firstname, customer.surname, "you're classed as a", customer.status)
+        print("Welcome", customer.firstname, customer.surname, "you're status is", customer.status)
+        return(customer)
     elif ShopperType == '2':
         customer = BargainHunters(firstname, surname)
         print("-" * 25)
-        print("Welcome", customer.firstname, customer.surname, "you're classed as a", customer.status)
+        print("Welcome", customer.firstname, customer.surname, "you're status is", customer.status)
+        return(customer)
     else:
-        print("Invalid option")
-    return(customer)
+        return
 
 
 """
@@ -165,7 +167,7 @@ def add_remove():
     if choice == '1':
         print_items()
         ID = int(input("\nSelect your item to add by Product ID : "))
-        if customer.listing == 0 and ID > 3: # error checking to prevent bargain hunter buying loyal items, cant figure out how to prevent the hardcoding of 3 here
+        if customer.listing == 0 and ShopItems.items_list[ID - 1]['loyal'] == 1: # error checking to prevent bargain hunter buying loyal items
             print("-" * 25)
             print("Invalid option")
         else:
@@ -176,7 +178,7 @@ def add_remove():
         if my_cart.cart_listing(ID) > 0:
             my_cart.cart_remove(ID)
         else:
-            print("Item not currently in cart")
+            print("Item not currently in cart or cart may be empty")
     else:
         print("Invalid option")
 
@@ -185,14 +187,13 @@ def add_remove():
 takes the my_cart dict and prints through it based on the length of it
 also totals up the prices and prints them back out for the user
 """
-def see_cart():
+def calculate_cart(total):
     print("-" * 25)
-    total = 0
     for x in range(len(my_cart.cart_get())):
         if my_cart.cart_listing(x + 1) != 0:
             print("Product ID [", ShopItems.items_list[x] ['ID'], "]", ShopItems.items_list[x] ['name'], "X", my_cart.cart_listing(x + 1))
             total = ShopItems.items_list[x] ['price'] * my_cart.cart_listing(x + 1) # adds value of the shop item to the my_cart dict in order to pass back the total
-    print("Total price of cart : €", total)
+    print("Total price of cart : €", "{:.2f}".format(total)) # this formatting ensures that if multiple items are added the total will still only display in two decimal places
     return total
 
 
@@ -201,12 +202,20 @@ prints total value then asks for confirmation of checkout
 """
 def checkout():
     print("-" * 25)
-    print("Total price of cart : €", total)
-    choice = input("Confirm purchase? (y/n)\n")
-    if choice == 'y' or 'Y':
+    choice = input("Confirm purchase?\n[ 1 ] Yes\n[ 2 ] No\n")
+    if choice == '1':
         print("-" * 25)
-        print("Thanks", customer.firstname, "for shopping with us")
-        exit(print("Goodbye"))
+        card_number = input("Please enter your 16 digit long card number : \n")
+        if not re.match("[0-9]", card_number): # checks input to ensure only values between 0 and 9 are entered
+            print("Invalid card number")
+        elif len(card_number) > 16 or len(card_number) >= 17: # checks input to ensure there are 16 digits entered
+            print("Invalid card number")
+        elif len(card_number) == 16 and re.match("[0-9]", card_number):
+            print("-" * 25)
+            print("Confirmation recieved!\nThanks", customer.firstname, "for shopping with us")
+            exit(print("Goodbye!"))
+    else:
+        return 
 
 
 """
@@ -215,9 +224,9 @@ test function to see quick execution of code
 def test():
     ans = input("[ 1 ] Loyal\n[ 2 ] Bargain\n")
     if ans == '1':
-        customer = LoyalCustomers('hello', 'world')
+        customer = LoyalCustomers('Master', 'Chief')
     elif ans == '2':
-        customer = BargainHunters('hello', 'world')
+        customer = BargainHunters('John', 'Wick')
     print(customer)
     print_items()
     my_cart.cart_add(1)
@@ -228,12 +237,13 @@ def test():
     print("added [ 3 ] to cart")
     my_cart.cart_remove(1)
     print("removed [ 1 ] from cart")
-    see_cart()
+    calculate_cart(total)
     checkout()
 
 
 customer = None # setting as None initially so as user will be forced to make a customer
 my_cart = ShoppingCart() # setting my_cart as the shoppingcart class
+total = 0
 
 while True: # loop forever
     main_menu()
@@ -246,18 +256,20 @@ while True: # loop forever
         main_menu()
         option = input() # users choice from menu
         if option == '1':
+            print("-" * 25)
             print ("Customer already created")
         if option == '2': # list products
             print_items()
         if option == '3': # add / remove products
             add_remove()
         if option == '4': # see current shopping cart
-            total = see_cart()
+            calculate_cart(total)
         if option == '5': # checkout
+            calculate_cart(total) # putting this here enables us to go straight to checkout without selection option 4 first
             checkout()
         elif option == '6': # exit code
             print("-" * 25)
-            exit(print("Goodbye"))
+            exit(print("Goodbye", customer.firstname)) # goodbye by name because a customer has been made at this point
             
     if option == '6': # exit code
         print("-" * 25)
@@ -265,3 +277,4 @@ while True: # loop forever
     elif not customer:
         print("-" * 25)
         print("Please create a customer first")
+
