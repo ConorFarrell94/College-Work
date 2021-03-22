@@ -1,4 +1,4 @@
-package com.oopAssignment.test;
+package com.oopAssignment.topicModeller;
 
 public class control {
     public static void main(String[] args)
