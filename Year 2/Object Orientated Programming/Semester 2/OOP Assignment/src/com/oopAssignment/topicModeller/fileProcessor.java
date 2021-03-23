@@ -5,7 +5,7 @@ import java.util.*;
 public class fileProcessor {
 
     public static HashMap<String, Integer> processFile(String file) {
-        HashMap<String, Integer> wordOccurrence = new HashMap<String, Integer>(); // found at https://www.w3schools.com/java/java_hashmap.asp
+        HashMap<String, Integer> wordOccurrence = new HashMap<>(); // found at https://www.w3schools.com/java/java_hashmap.asp
         int x;
         String[] myFile = file.split(" ");
 
@@ -34,18 +34,34 @@ public class fileProcessor {
             }
         }
 
-        for (String key : wordOccurrence.keySet()) {
-            System.out.println("Word: " + key + " | Occurrences: " + wordOccurrence.get(key));
-        }
-
         return wordOccurrence;
 
     }
 
     // began to really see the use of snippets that IDE's can generate here
-    public static void topTen(HashMap<String, Integer> file) {
-        Map<String, Integer> treeMap = new TreeMap<>(file);
-        System.out.println(treeMap);
+    public static LinkedHashMap<String, Integer> topTen(HashMap<String, Integer> file) {
+        /*
+        Map<String, Integer> treeMap = new TreeMap<>(Collections.reverseOrder());
+        treeMap.putAll(file);
+
+        for (Map.Entry entry : treeMap.entrySet())
+        {
+            System.out.println("Word: " + entry.getKey() + " | Occurrences: " + entry.getValue());
+        }
+        */
+
+        Map<String, Integer> unSorted = file;
+
+        System.out.println("Unsorted Map: " + unSorted);
+
+        LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
+
+        unSorted.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x->sortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println("Sorted Map: " + sortedMap);
+
+        return sortedMap;
+
     }
 
 }
