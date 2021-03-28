@@ -7,6 +7,14 @@ public class fileProcessor {
     public static HashMap<String, Integer> processFile(String file) {
         HashMap<String, Integer> wordOccurrence = new HashMap<>(); // found at https://www.w3schools.com/java/java_hashmap.asp
         int x;
+        file = file.replaceAll(",", " ");
+        file = file.replaceAll(";", " ");
+        file = file.replaceAll(":", " ");
+        file = file.replaceAll("\\.", " ");
+        file = file.replaceAll("-", " ");
+        file = file.replaceAll("  ", " "); // double space regex here because when you replace "," with " " it turns into 2 spaces and gets through
+        file = file.replaceAll("   ", " "); // triple space regex here because when you replace "-" with " " it turns into 3 spaces and gets through
+        file = file.toLowerCase(Locale.ROOT); // turns whole file lowercase so as "Some" and "some" will be counted as the same word
         String[] myFile = file.split(" ");
 
         for (int i = 0; i < myFile.length; i++) {

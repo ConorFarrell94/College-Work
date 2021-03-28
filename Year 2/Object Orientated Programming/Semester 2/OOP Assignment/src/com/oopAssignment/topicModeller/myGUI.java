@@ -3,8 +3,6 @@ package com.oopAssignment.topicModeller;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -13,7 +11,6 @@ import java.util.*;
 public class myGUI extends JFrame {
 
     public String x;
-    public int y;
     public Path path1, path2;
     public String file1Text, file2Text;
     public HashMap<String, Integer> processedFile1, processedFile2;
@@ -172,7 +169,16 @@ public class myGUI extends JFrame {
             // this was pretty difficult to do for me, took many attempts. Most useful information was found at : https://www.geeksforgeeks.org/arraylist-retainall-method-in-java/
             textAreaCompare.setText(null);
             topTenFile1.retainAll(topTenFile2);
-            textAreaCompare.append("Words in common between the two documents are: " + topTenFile1);
+            textAreaCompare.setText("Words in common between the two documents are: ");
+            for (int i = 0; i < topTenFile1.size(); i ++) {
+                textAreaCompare.append("\n[" + (i + 1) + "] " + topTenFile1.get(i));
+            }
+            if (topTenFile1.size() > 7) {
+                textAreaCompare.append("\nThese two documents have 70% or more words in common.");
+            }
+            else if (topTenFile1.size() < 7) {
+                textAreaCompare.append("\nThese two documents have less than 70% words in common.");
+            }
             System.out.println(topTenFile1);
             tenComparedLabel.setVisible(true);
             scroll5.setVisible(true);
