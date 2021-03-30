@@ -12,8 +12,10 @@ public class fileProcessor {
         file = file.replaceAll(":", " ");
         file = file.replaceAll("\\.", " ");
         file = file.replaceAll("-", " ");
-        file = file.replaceAll("  ", " "); // double space regex here because when you replace "," with " " it turns into 2 spaces and gets through
-        file = file.replaceAll("   ", " "); // triple space regex here because when you replace "-" with " " it turns into 3 spaces and gets through
+        file = file.replaceAll("\"", " ");
+        file = file.replaceAll("\\s+", " ");
+        // https://stackoverflow.com/questions/5455794/removing-whitespace-from-strings-in-java#:~:text=replaceAll(%22%5C%5Cs%2B%22%2C,%22)%20produce%20the%20same%20result.
+        // found above link much later than I would have liked, solves a lot of problems I was having
         file = file.toLowerCase(Locale.ROOT); // turns whole file lowercase so as "Some" and "some" will be counted as the same word
         String[] myFile = file.split(" ");
 
@@ -58,13 +60,9 @@ public class fileProcessor {
         }
         */
 
-        Map<String, Integer> unSorted = file;
-
-        System.out.println("Unsorted Map: " + unSorted);
-
         LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
 
-        unSorted.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x->sortedMap.put(x.getKey(), x.getValue()));
+        ((Map<String, Integer>) file).entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x->sortedMap.put(x.getKey(), x.getValue()));
 
         System.out.println("Sorted Map: " + sortedMap);
 

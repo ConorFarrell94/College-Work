@@ -13,7 +13,7 @@ public class myGUI extends JFrame {
     public String x;
     public Path path1, path2;
     public String file1Text, file2Text;
-    public HashMap<String, Integer> processedFile1, processedFile2;
+    public HashMap<String, Integer> processedFile1, processedFile2, stopWordsList;
     ArrayList topTenFile1 = new ArrayList();
     ArrayList topTenFile2 = new ArrayList();
 
@@ -64,6 +64,7 @@ public class myGUI extends JFrame {
         JButton compareButton = new JButton("Compare Top Ten");
         JButton exitButton = new JButton("Exit");
         JButton resetButton = new JButton("Reset");
+        JButton stopWordsButton = new JButton("StopWords");
 
         /* Originally here I had:
             @Override
@@ -104,14 +105,16 @@ public class myGUI extends JFrame {
             }
             fileOneLabel.setVisible(true);
             scroll1.setVisible(true);
+            processedFile1.keySet().removeAll(stopWordsList.keySet());
         });
+
         selectFileTwoButton.addActionListener(e -> {
             JFileChooser fileChooser2 = new JFileChooser();
             int result = fileChooser2.showOpenDialog(null);
             if (result == JFileChooser.APPROVE_OPTION)
             {
                 path2 = fileChooser2.getSelectedFile().toPath();
-                System.out.println(path1);
+                System.out.println(path2);
                 try {
                     file2Text = Files.readString(path2);
                 } catch (IOException ioException) {
@@ -122,6 +125,7 @@ public class myGUI extends JFrame {
             }
             fileTwoLabel.setVisible(true);
             scroll2.setVisible(true);
+            processedFile2.keySet().removeAll(stopWordsList.keySet());
         });
 
         fileOneTopTenButton.addActionListener(e -> {
@@ -144,6 +148,7 @@ public class myGUI extends JFrame {
             topTenFOneLabel.setVisible(true);
             scroll3.setVisible(true);
         });
+
         file2TopTenButton.addActionListener(e -> {
             LinkedHashMap<String, Integer> topTen2 = fileProcessor.topTen(processedFile2);
             textAreaTopTen2.setText(null);
@@ -151,11 +156,11 @@ public class myGUI extends JFrame {
             for (Map.Entry entry : topTen2.entrySet())
             {
                 if(i < 11) {
-                    textAreaTopTen2.append("[" + (i) + "] " + entry.getKey() + " | Occurrences: " + entry.getValue() + "\n");
-                    x = (String) entry.getKey();
-                    topTenFile2.add(entry.getKey());
-                    i++;
-                }
+                        textAreaTopTen2.append("[" + (i) + "] " + entry.getKey() + " | Occurrences: " + entry.getValue() + "\n");
+                        x = (String) entry.getKey();
+                        topTenFile2.add(entry.getKey());
+                        i++;
+                    }
                 else {
                     break;
                 }
@@ -174,10 +179,10 @@ public class myGUI extends JFrame {
                 textAreaCompare.append("\n[" + (i + 1) + "] " + topTenFile1.get(i));
             }
             if (topTenFile1.size() > 7) {
-                textAreaCompare.append("\nThese two documents have 70% or more words in common.");
+                textAreaCompare.append("\nThese two documents have 70% or more words in common.\nVery likely to be about the same topic.");
             }
             else if (topTenFile1.size() < 7) {
-                textAreaCompare.append("\nThese two documents have less than 70% words in common.");
+                textAreaCompare.append("\nThese two documents have less than 70% words in common.\nIt's unlikely these are about the same topic");
             }
             System.out.println(topTenFile1);
             tenComparedLabel.setVisible(true);
@@ -194,6 +199,10 @@ public class myGUI extends JFrame {
         });
 
         resetButton.addActionListener(e-> {
+            topTenFile1.clear();
+            topTenFile2.clear();
+            processedFile1.clear();
+            processedFile2.clear();
             fileOneLabel.setVisible(false);
             scroll1.setVisible(false);
             fileTwoLabel.setVisible(false);
@@ -210,6 +219,37 @@ public class myGUI extends JFrame {
             textAreaFile2.setText(null);
             textAreaTopTen1.setText(null);
             textAreaTopTen2.setText(null);
+        });
+
+        stopWordsButton.addActionListener(e-> {
+
+            JFileChooser fileChooser3 = new JFileChooser();
+            int result = fileChooser3.showOpenDialog(null);
+
+            if (result == JFileChooser.APPROVE_OPTION) {
+
+                Path path1 = fileChooser3.getSelectedFile().toPath();
+                String stopWordsFile = "";
+
+                try {
+                    stopWordsFile = Files.readString(path1);
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
+
+                stopWordsFile.toLowerCase(Locale.ROOT);
+                stopWordsFile.replaceAll("\n", " ");
+                stopWordsFile.split(" ");
+
+                Scanner scanner1 = new Scanner(stopWordsFile);
+                stopWordsList = new HashMap<>();
+
+                while (scanner1.hasNextLine()) {
+                    stopWordsList.put(scanner1.next(), 1);
+                }
+
+                JOptionPane.showMessageDialog(null, "Stop words loaded successfully");
+            }
         });
 
         panel1.setBackground(Color.BLUE);
@@ -242,6 +282,8 @@ public class myGUI extends JFrame {
         exitButton.setForeground(Color.white);
         resetButton.setBackground(Color.darkGray);
         resetButton.setForeground(Color.white);
+        stopWordsButton.setBackground(Color.darkGray);
+        stopWordsButton.setForeground(Color.white);
 
         panel3.setLayout(new BoxLayout(panel3, BoxLayout.PAGE_AXIS));
         panel3.setBackground(Color.BLUE);
@@ -290,9 +332,11 @@ public class myGUI extends JFrame {
         textAreaCompare.setForeground(Color.white);
 
         panel4.setLayout(new GridLayout(10,1));
+        panel4.setBorder(new EmptyBorder(0,10,0,0));
         panel4.setBackground(Color.BLUE);
         panel4.add(exitButton);
         panel4.add(resetButton);
+        panel4.add(stopWordsButton);
 
         add(panel1, BorderLayout.PAGE_START);
         add(panel2, BorderLayout.WEST);
