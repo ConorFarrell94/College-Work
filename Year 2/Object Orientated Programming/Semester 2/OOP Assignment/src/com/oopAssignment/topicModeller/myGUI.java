@@ -14,15 +14,15 @@ public class myGUI extends JFrame {
     public Path path1, path2;
     public String file1Text, file2Text;
     public HashMap<String, Integer> processedFile1, processedFile2, stopWordsList;
-    ArrayList topTenFile1 = new ArrayList();
-    ArrayList topTenFile2 = new ArrayList();
+    public ArrayList topTenFile1 = new ArrayList();
+    public ArrayList topTenFile2 = new ArrayList();
 
     myGUI(String title) {
 
         super(title);
 
         setLayout(new BorderLayout());
-        setSize(1200, 850);
+        setSize(1200, 1000);
 
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
@@ -187,6 +187,7 @@ public class myGUI extends JFrame {
             System.out.println(topTenFile1);
             tenComparedLabel.setVisible(true);
             scroll5.setVisible(true);
+            topTenFile1.removeAll(topTenFile2);
         });
 
         // button 6 adds a confirmation pop-up to close the program, could possibly see if theres a way to add this to the "X" on top right of program too
@@ -199,10 +200,6 @@ public class myGUI extends JFrame {
         });
 
         resetButton.addActionListener(e-> {
-            topTenFile1.clear();
-            topTenFile2.clear();
-            processedFile1.clear();
-            processedFile2.clear();
             fileOneLabel.setVisible(false);
             scroll1.setVisible(false);
             fileTwoLabel.setVisible(false);
@@ -219,6 +216,11 @@ public class myGUI extends JFrame {
             textAreaFile2.setText(null);
             textAreaTopTen1.setText(null);
             textAreaTopTen2.setText(null);
+
+            topTenFile1.clear();
+            topTenFile2.clear();
+            processedFile1.clear();
+            processedFile2.clear();
         });
 
         stopWordsButton.addActionListener(e-> {
@@ -245,7 +247,7 @@ public class myGUI extends JFrame {
                 stopWordsList = new HashMap<>();
 
                 while (scanner1.hasNextLine()) {
-                    stopWordsList.put(scanner1.next(), 1);
+                    stopWordsList.put(scanner1.next(), 1); // putting them into a hashmap because its easier to compare it against the other files
                 }
 
                 JOptionPane.showMessageDialog(null, "Stop words loaded successfully");
@@ -285,28 +287,23 @@ public class myGUI extends JFrame {
         stopWordsButton.setBackground(Color.darkGray);
         stopWordsButton.setForeground(Color.white);
 
-        panel3.setLayout(new BoxLayout(panel3, BoxLayout.PAGE_AXIS));
+        panel3.setLayout(new GridLayout(5, 1));
         panel3.setBackground(Color.BLUE);
 
-        panel3.add(fileOneLabel);
         panel3.add(scroll1);
-        fileOneLabel.setVisible(false);
+        scroll1.setBorder(BorderFactory.createTitledBorder("File 1"));
         scroll1.setVisible(false);
-        panel3.add(fileTwoLabel);
         panel3.add(scroll2);
-        fileTwoLabel.setVisible(false);
+        scroll2.setBorder(BorderFactory.createTitledBorder("File 2"));
         scroll2.setVisible(false);
-        panel3.add(topTenFOneLabel);
         panel3.add(scroll3);
-        topTenFOneLabel.setVisible(false);
+        scroll3.setBorder(BorderFactory.createTitledBorder("Top Ten - File 1"));
         scroll3.setVisible(false);
-        panel3.add(topTenFTwoLabel);
         panel3.add(scroll4);
-        topTenFTwoLabel.setVisible(false);
+        scroll4.setBorder(BorderFactory.createTitledBorder("Top Ten - File 2"));
         scroll4.setVisible(false);
-        panel3.add(tenComparedLabel);
         panel3.add(scroll5);
-        tenComparedLabel.setVisible(false);
+        scroll5.setBorder(BorderFactory.createTitledBorder("Top Ten Compared"));
         scroll5.setVisible(false);
 
         fileOneLabel.setForeground(Color.WHITE);
@@ -331,7 +328,7 @@ public class myGUI extends JFrame {
         textAreaCompare.setBackground(Color.darkGray);
         textAreaCompare.setForeground(Color.white);
 
-        panel4.setLayout(new GridLayout(10,1));
+        panel4.setLayout(new GridLayout(3,1));
         panel4.setBorder(new EmptyBorder(0,10,0,0));
         panel4.setBackground(Color.BLUE);
         panel4.add(exitButton);

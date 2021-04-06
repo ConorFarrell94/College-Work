@@ -19,10 +19,6 @@ public class fileProcessor {
         file = file.toLowerCase(Locale.ROOT); // turns whole file lowercase so as "Some" and "some" will be counted as the same word
         String[] myFile = file.split(" ");
 
-        for (int i = 0; i < myFile.length; i++) {
-            myFile[i] = myFile[i].replaceAll(" ", "");
-        }
-
         /* I did have this here originally:
         for (int i = 0; i < myFile.length; i++) {
             if (wordOccurrence.containsKey(myFile[i])) {
