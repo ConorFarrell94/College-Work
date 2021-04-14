@@ -39,9 +39,7 @@ public class fileProcessor {
                 wordOccurrence.put(s, 1);
             }
         }
-
         return wordOccurrence;
-
     }
 
     // began to really see the use of snippets that IDE's can generate here
@@ -55,15 +53,9 @@ public class fileProcessor {
             System.out.println("Word: " + entry.getKey() + " | Occurrences: " + entry.getValue());
         }
         */
-
         LinkedHashMap<String, Integer> sortedMap = new LinkedHashMap<>();
-
         ((Map<String, Integer>) file).entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEachOrdered(x->sortedMap.put(x.getKey(), x.getValue()));
-
         System.out.println("Sorted Map: " + sortedMap);
-
         return sortedMap;
-
     }
-
 }

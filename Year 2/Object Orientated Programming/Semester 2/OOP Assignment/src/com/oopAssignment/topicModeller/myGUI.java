@@ -29,6 +29,7 @@ public class myGUI extends JFrame {
         JPanel panel3 = new JPanel();
         JPanel panel4 = new JPanel();
 
+        // creating scroll panels that contain text areas which in turn cannot be edited. scroll bars will only appear when needed
         JTextArea textAreaFile1 = new JTextArea();
         textAreaFile1.setEditable(false);
         JScrollPane scroll1 = new JScrollPane(textAreaFile1);
@@ -51,11 +52,6 @@ public class myGUI extends JFrame {
         scroll5.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
         JLabel title1 = new JLabel("Topic Modeller");
-        JLabel fileOneLabel = new JLabel("File 1");
-        JLabel fileTwoLabel = new JLabel("File 2");
-        JLabel topTenFOneLabel = new JLabel("Top 10 - File 1");
-        JLabel topTenFTwoLabel = new JLabel("Top 10 - File 2");
-        JLabel tenComparedLabel = new JLabel("Top Ten Compared");
 
         JButton selectFileOneButton = new JButton("Select File 1");
         JButton selectFileTwoButton = new JButton("Select File 2");
@@ -66,28 +62,9 @@ public class myGUI extends JFrame {
         JButton resetButton = new JButton("Reset");
         JButton stopWordsButton = new JButton("StopWords");
 
-        /* Originally here I had:
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JFileChooser fileChooser1 = new JFileChooser();
-                int result = fileChooser1.showOpenDialog(null);
-                if (result == JFileChooser.APPROVE_OPTION)
-                {
-                    path1 = fileChooser1.getSelectedFile().toPath();
-                    System.out.println(path1);
-                    try {
-                        file1Text = Files.readString(path1);
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }
-                    processedFile1 = fileProcessor.processFile(file1Text);
-                    textAreaFile1.setText(file1Text);
-                }
-            }
-        });
-
-        But my IDE suggested I replace it with lambda which looks cleaner
-        */
+        // opens a file chooser so as the user can select any .txt file to use in the program.
+        // uses "fileProcessor" class to parse through the file and format it in such a way we can use
+        // if stop-words have also been loaded they will be removed from the file in this function
         selectFileOneButton.addActionListener(e -> {
             JFileChooser fileChooser1 = new JFileChooser();
             int result = fileChooser1.showOpenDialog(null);
@@ -103,11 +80,13 @@ public class myGUI extends JFrame {
                 processedFile1 = fileProcessor.processFile(file1Text);
                 textAreaFile1.setText(file1Text);
             }
-            fileOneLabel.setVisible(true);
             scroll1.setVisible(true);
             processedFile1.keySet().removeAll(stopWordsList.keySet());
         });
 
+        // opens a file chooser so as the user can select any .txt file to use in the program.
+        // uses "fileProcessor" class to parse through the file and format it in such a way we can use
+        // if stop-words have also been loaded they will be removed from the file in this function
         selectFileTwoButton.addActionListener(e -> {
             JFileChooser fileChooser2 = new JFileChooser();
             int result = fileChooser2.showOpenDialog(null);
@@ -123,11 +102,11 @@ public class myGUI extends JFrame {
                 processedFile2 = fileProcessor.processFile(file2Text);
                 textAreaFile2.setText(file2Text);
             }
-            fileTwoLabel.setVisible(true);
             scroll2.setVisible(true);
             processedFile2.keySet().removeAll(stopWordsList.keySet());
         });
 
+        // takes file one processed file. sorts it and then gives back out the top ten results
         fileOneTopTenButton.addActionListener(e -> {
             LinkedHashMap<String, Integer> topTen2 = fileProcessor.topTen(processedFile1);
             textAreaTopTen1.setText(null); // putting this here in-case you want to run it multiple times without closing program
@@ -145,10 +124,10 @@ public class myGUI extends JFrame {
                 }
             }
             System.out.println(topTenFile1);
-            topTenFOneLabel.setVisible(true);
             scroll3.setVisible(true);
         });
 
+        // takes file two processed file. sorts it and then gives back out the top ten results
         file2TopTenButton.addActionListener(e -> {
             LinkedHashMap<String, Integer> topTen2 = fileProcessor.topTen(processedFile2);
             textAreaTopTen2.setText(null);
@@ -166,10 +145,10 @@ public class myGUI extends JFrame {
                 }
             }
             System.out.println(topTenFile2);
-            topTenFTwoLabel.setVisible(true);
             scroll4.setVisible(true);
         });
 
+        // compares the top then words of each file to determine if they are similar/about the same topic
         compareButton.addActionListener(e -> {
             // this was pretty difficult to do for me, took many attempts. Most useful information was found at : https://www.geeksforgeeks.org/arraylist-retainall-method-in-java/
             textAreaCompare.setText(null);
@@ -185,12 +164,11 @@ public class myGUI extends JFrame {
                 textAreaCompare.append("\nThese two documents have less than 70% words in common.\nIt's unlikely these are about the same topic");
             }
             System.out.println(topTenFile1);
-            tenComparedLabel.setVisible(true);
             scroll5.setVisible(true);
             topTenFile1.removeAll(topTenFile2);
         });
 
-        // button 6 adds a confirmation pop-up to close the program, could possibly see if theres a way to add this to the "X" on top right of program too
+        // adds a confirmation pop-up to close the program
         exitButton.addActionListener(e -> {
             String[] options = {"Yes","No"};
             int result = JOptionPane.showOptionDialog(null, "Are you sure?", "Confirm Exit",JOptionPane.DEFAULT_OPTION,JOptionPane.WARNING_MESSAGE,null,options,options[1]);
@@ -199,16 +177,12 @@ public class myGUI extends JFrame {
             }
         });
 
+        // resets the screen and clears data holders so you can use the program again without having to close and re-open
         resetButton.addActionListener(e-> {
-            fileOneLabel.setVisible(false);
             scroll1.setVisible(false);
-            fileTwoLabel.setVisible(false);
             scroll2.setVisible(false);
-            topTenFOneLabel.setVisible(false);
             scroll3.setVisible(false);
-            topTenFTwoLabel.setVisible(false);
             scroll4.setVisible(false);
-            tenComparedLabel.setVisible(false);
             scroll5.setVisible(false);
 
             textAreaCompare.setText(null);
@@ -223,6 +197,7 @@ public class myGUI extends JFrame {
             processedFile2.clear();
         });
 
+        // opens a file chooser for the user to select their own text file of stop-words to use in the program
         stopWordsButton.addActionListener(e-> {
 
             JFileChooser fileChooser3 = new JFileChooser();
@@ -249,11 +224,11 @@ public class myGUI extends JFrame {
                 while (scanner1.hasNextLine()) {
                     stopWordsList.put(scanner1.next(), 1); // putting them into a hashmap because its easier to compare it against the other files
                 }
-
                 JOptionPane.showMessageDialog(null, "Stop words loaded successfully");
             }
         });
 
+        // adding title to the center of the program
         panel1.setBackground(Color.BLUE);
         title1.setForeground(Color.WHITE);
         title1.setFont(new Font("Courier", Font.BOLD, 18));
@@ -264,6 +239,7 @@ public class myGUI extends JFrame {
         panel2.setBackground(Color.BLUE);
         panel2.setBorder(new EmptyBorder(0,0,0,10));
 
+        // adding buttons to the left hand side and setting colors
         panel2.add(selectFileOneButton);
         selectFileOneButton.setBackground(Color.darkGray);
         selectFileOneButton.setForeground(Color.white);
@@ -290,6 +266,8 @@ public class myGUI extends JFrame {
         panel3.setLayout(new GridLayout(5, 1));
         panel3.setBackground(Color.BLUE);
 
+        // adding scroll panels that will pop up when information is added to them
+        // use of titled borders allows us to use grid layout nicely here so as the displays are all evenly sized
         panel3.add(scroll1);
         scroll1.setBorder(BorderFactory.createTitledBorder("File 1"));
         scroll1.setVisible(false);
@@ -305,17 +283,6 @@ public class myGUI extends JFrame {
         panel3.add(scroll5);
         scroll5.setBorder(BorderFactory.createTitledBorder("Top Ten Compared"));
         scroll5.setVisible(false);
-
-        fileOneLabel.setForeground(Color.WHITE);
-        fileOneLabel.setFont(new Font("Courier", Font.BOLD, 14));
-        fileTwoLabel.setForeground(Color.WHITE);
-        fileTwoLabel.setFont(new Font("Courier", Font.BOLD, 14));
-        topTenFOneLabel.setForeground(Color.WHITE);
-        topTenFOneLabel.setFont(new Font("Courier", Font.BOLD, 14));
-        topTenFTwoLabel.setForeground(Color.WHITE);
-        topTenFTwoLabel.setFont(new Font("Courier", Font.BOLD, 14));
-        tenComparedLabel.setForeground(Color.WHITE);
-        tenComparedLabel.setFont(new Font("Courier", Font.BOLD, 14));
 
         textAreaFile1.setBackground(Color.darkGray);
         textAreaFile1.setForeground(Color.white);
