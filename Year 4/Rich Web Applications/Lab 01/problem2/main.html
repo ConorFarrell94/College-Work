@@ -1,0 +1,35 @@
+<html>
+	<header>
+		<link rel="stylesheet" href="styles.css" />
+	</header>
+	<body>
+		<div id="container">
+			<div id="noteTaker">
+				<h2 id="noteTaker-title">NoteTaker</h2>
+				<label>Title</label>
+				<br>
+				<input type="text" id="title" name="title"/>
+				<br>
+				<label>Body</label>
+				<textarea rows="10" cols="50" id="message" name="message"></textarea>
+				<label>Color</label>
+				<select id="color" name="color">
+					<option value="red" selected>Red</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+				</select>
+				<div id="button">
+					<button id="add-btn">Create Note</button>
+					<div id="error"></div>
+				</div>
+			</div>
+			<div id="notesSection">
+				<h2>Notes</h2>
+				<ul id="notes"></ul>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<script src="scripts.js"></script>
+	</footer>
+</html>

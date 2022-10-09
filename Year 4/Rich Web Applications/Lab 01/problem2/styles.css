@@ -1,0 +1,59 @@
+#container {
+	width: 100%;
+	padding: 5%;
+}
+
+textarea {
+	display: block;
+	padding: 2%;
+}
+
+button {
+	position: relative;
+	display: block;
+	width: 100px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background: blue;
+	color: white;
+}
+
+#notes li {
+	position: relative;
+	list-style-type: none;
+	width: 200px;
+	height: 150px;
+	padding: 10px 10px;
+	border-radius: 5px;
+	margin: 0 10px 10px;
+}
+
+#notes li.red {
+	background: red;
+}
+
+#notes li.green {
+	background: green;
+}
+
+#notes li.blue {
+	background: blue;
+}
+
+footer {
+	position: absolute;
+	bottom: 0px;
+}
+.delete {
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.noteTaker-title {
+	font-size: x-large;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+}
+
