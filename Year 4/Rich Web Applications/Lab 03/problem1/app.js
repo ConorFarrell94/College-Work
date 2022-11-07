@@ -1,6 +1,9 @@
 const addBtn = document.querySelector("#add")
 const main = document.querySelector("#main")
-addBtn.addEventListener("click",function() { addNote() })
+// addBtn.addEventListener("click",function() { addNote() })
+
+rxjs.fromEvent(addBtn, 'click')
+    .subscribe(() => addNote());
 
 const changeColor = (x) => {
     x.parentElement.style.backgroundColor=x.value
@@ -35,25 +38,40 @@ const addNote = (text = "") => {
     <textarea>${text}</textarea>
     `;
 
-    note.querySelector(".bin").addEventListener(
-        "click",
-        function() {
-            note.remove()
-            saveNotes()
-        }
-    )
-    note.querySelector(".save").addEventListener(
-        "click",
-        function() {
-            saveNotes()
-        }
-    )
-    note.querySelector("textarea").addEventListener(
-        "focusout",
-        function() {
-            saveNotes()
-        }
-    )
+    let bin = note.querySelector(".bin")
+    let save = note.querySelector(".save")
+    let textarea = note.querySelector("textarea")
+
+    rxjs.fromEvent(bin, 'click')
+        .subscribe( () => note.remove())
+    rxjs.fromEvent(bin, 'click')
+        .subscribe( () => saveNotes())
+
+    rxjs.fromEvent(save, 'click')
+        .subscribe( () => saveNotes())
+
+    rxjs.fromEvent(textarea, 'focusout')
+        .subscribe( () => saveNotes())
+
+    // note.querySelector(".bin").addEventListener(
+    //     "click",
+    //     function() {
+    //         note.remove()
+    //         saveNotes()
+    //     }
+    // )
+    // note.querySelector(".save").addEventListener(
+    //     "click",
+    //     function() {
+    //         saveNotes()
+    //     }
+    // )
+    // note.querySelector("textarea").addEventListener(
+    //     "focusout",
+    //     function() {
+    //         saveNotes()
+    //     }
+    // )
 
     main.appendChild(note);
     saveNotes()
