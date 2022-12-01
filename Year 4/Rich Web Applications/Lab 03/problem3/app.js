@@ -23,7 +23,7 @@ const addNote = () => {
 	const note = document.createElement("note-template");
 	note.innerHTML = `
     <note-card name="${noteTitle.value}">
-    <div slot="email">${noteContent.value}</div>
+    <div slot="content">${noteContent.value}</div>
     </note-card>
     `;
 	main.appendChild(note);
@@ -35,10 +35,10 @@ template.innerHTML = `
     <div>
       <h3></h3>
       <div class="info">
-        <p><slot name="email" /></p>
+        <p><slot name="content" /></p>
       </div>
       <button id="addSubNote">Add subNote</button>
-      <button id="toggle-info">Hide Info</button>
+      <button id="toggle_content">Hide Content</button>
       <button id="removeNote">Remove Note</button>
     </div>
   </div>
@@ -59,14 +59,14 @@ class noteTemplate extends HTMLElement {
 		this.showInfo = !this.showInfo;
 
 		const info = this.shadowRoot.querySelector(".info");
-		const toggleBtn = this.shadowRoot.querySelector("#toggle-info");
+		const toggleBtn = this.shadowRoot.querySelector("#toggle_content");
 
 		if (this.showInfo) {
 			info.style.display = "block";
-			toggleBtn.innerText = "Hide Info";
+			toggleBtn.innerText = "Hide Content";
 		} else {
 			info.style.display = "none";
-			toggleBtn.innerText = "Show Info";
+			toggleBtn.innerText = "Show Content";
 		}
 	}
 	removeNote() {
@@ -75,28 +75,18 @@ class noteTemplate extends HTMLElement {
 	}
 	addSubnote() {
 		const info = this.shadowRoot.querySelector(".info");
-		// const subNote = this.shadowRoot.querySelector('#addSubNote')
-		// let noteTitle = prompt("sub note title")
 		let noteContent = prompt("content");
 		console.log(noteTitle);
 		console.log(noteContent);
 		let html_to_insert = `
-    <p><slot name="email" />${noteContent}</p>
-    `;
+		<p><slot name="content" />${noteContent}</p>
+		`;
 		info.insertAdjacentHTML("beforeend", html_to_insert);
-
-		// const note = document.createElement('note-template');
-		// note.innerHTML = `
-		// <note-card name="${noteTitle.value}">
-		// <div slot="email">${noteContent.value}</div>
-		// </note-card>
-		// `
-		// subNote.parentElement.appendChild(note);
 	}
 
 	connectedCallback() {
 		this.shadowRoot
-			.querySelector("#toggle-info")
+			.querySelector("#toggle_content")
 			.addEventListener("click", () => this.toggleInfo());
 		this.shadowRoot
 			.querySelector("#removeNote")
@@ -107,7 +97,7 @@ class noteTemplate extends HTMLElement {
 	}
 
 	disconnectedCallback() {
-		this.shadowRoot.querySelector("#toggle-info").removeEventListener();
+		this.shadowRoot.querySelector("#toggle_content").removeEventListener();
 		this.shadowRoot.querySelector("#removeNote").removeEventListener();
 	}
 }
