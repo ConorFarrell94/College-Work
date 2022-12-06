@@ -1,0 +1,15 @@
+.note-input textarea {
+  width: 80%;
+  height: 200px;
+  margin: 20px auto;
+  display: block;
+  padding: .5rem;
+  border: 2px solid #54efa7;
+}
+
+.note-input button {
+  margin: 0 auto;
+  display: block;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}

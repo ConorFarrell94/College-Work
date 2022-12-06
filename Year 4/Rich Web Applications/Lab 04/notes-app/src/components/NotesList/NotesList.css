@@ -1,0 +1,29 @@
+.note {
+  padding: 2rem;
+  width: 100%;
+  margin: 20px auto;
+  border: 1px solid #54efa7;
+  position: relative;
+  white-space: pre-wrap;
+}
+
+.note-edit {
+  position: absolute;
+  right: -25px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.note-delete {
+  position: absolute;
+  right: -25px;
+  top: 30px;
+  cursor: pointer;
+}
+.note-color {
+  background-color: cornflowerblue;
+  position: absolute;
+  right: -25px;
+  top: 55px;
+  cursor: pointer;
+}
