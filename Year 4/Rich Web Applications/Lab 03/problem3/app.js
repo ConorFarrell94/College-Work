@@ -1,0 +1,105 @@
+const { Observable, fromEvent } = rxjs;
+
+const main = document.querySelector("#main");
+const addBtn = document.querySelector("#add");
+
+rxjs.fromEvent(addBtn, "click").subscribe(() => addNote());
+
+let noteTitle = document.getElementById("noteTitle");
+let noteContent = document.getElementById("noteContent");
+rxjs
+	.fromEvent(noteTitle, "keyup")
+	.subscribe(() => console.log(noteTitle.value));
+rxjs
+	.fromEvent(noteContent, "keyup")
+	.subscribe(() => console.log(noteContent.value));
+
+const addNote = () => {
+	console.log(noteTitle.value);
+	console.log(noteContent.value);
+
+	// let noteTitle = prompt("enter note title")
+	// let noteContent = prompt("note content :")
+	const note = document.createElement("note-template");
+	note.innerHTML = `
+    <note-card name="${noteTitle.value}">
+    <div slot="content">${noteContent.value}</div>
+    </note-card>
+    `;
+	main.appendChild(note);
+};
+
+const template = document.createElement("template");
+template.innerHTML = `
+  <div class="note-card">
+    <div>
+      <h3></h3>
+      <div class="info">
+        <p><slot name="content" /></p>
+      </div>
+      <button id="addSubNote">Add subNote</button>
+      <button id="toggle_content">Hide Content</button>
+      <button id="removeNote">Remove Note</button>
+    </div>
+  </div>
+`;
+
+class noteTemplate extends HTMLElement {
+	constructor() {
+		super();
+
+		this.showInfo = true;
+
+		this.attachShadow({ mode: "open" });
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
+		this.shadowRoot.querySelector("h3").innerText = this.getAttribute("name");
+	}
+
+	toggleInfo() {
+		this.showInfo = !this.showInfo;
+
+		const info = this.shadowRoot.querySelector(".info");
+		const toggleBtn = this.shadowRoot.querySelector("#toggle_content");
+
+		if (this.showInfo) {
+			info.style.display = "block";
+			toggleBtn.innerText = "Hide Content";
+		} else {
+			info.style.display = "none";
+			toggleBtn.innerText = "Show Content";
+		}
+	}
+	removeNote() {
+		const removeButton = this.shadowRoot.querySelector("#removeNote");
+		removeButton.parentElement.remove();
+	}
+	addSubnote() {
+		const info = this.shadowRoot.querySelector(".info");
+		let noteContent = prompt("content");
+		console.log(noteTitle);
+		console.log(noteContent);
+		let html_to_insert = `
+		<p><slot name="content" />${noteContent}</p>
+		`;
+		info.insertAdjacentHTML("beforeend", html_to_insert);
+	}
+
+	connectedCallback() {
+		this.shadowRoot
+			.querySelector("#toggle_content")
+			.addEventListener("click", () => this.toggleInfo());
+		this.shadowRoot
+			.querySelector("#removeNote")
+			.addEventListener("click", () => this.removeNote());
+		this.shadowRoot
+			.querySelector("#addSubNote")
+			.addEventListener("click", () => this.addSubnote());
+	}
+
+	disconnectedCallback() {
+		this.shadowRoot.querySelector("#toggle_content").removeEventListener();
+		this.shadowRoot.querySelector("#removeNote").removeEventListener();
+	}
+}
+
+window.customElements.define("note-card", noteTemplate);

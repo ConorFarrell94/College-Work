@@ -1,0 +1,42 @@
+input[type="text"] {
+	padding: 10px;
+}
+
+body {
+	background-color: #202124;
+	color: #ffffff;
+	font-family: monospace;
+	font-size: large;
+}
+
+#myForm {
+	text-align: center;
+	background-color: royalblue;
+	padding: 10px;
+}
+
+#userProfile {
+	float: left;
+	width: 50%;
+}
+
+#repo {
+	float: right;
+	width: 50%;
+	height: 100px;
+}
+#myTable {
+	/*float: right;*/
+	/*width: 50%;*/
+	/*height: 100px;*/
+	/*overflow-y: scroll;*/
+}
+thead,
+tbody {
+	display: block;
+}
+
+tbody {
+	max-height: 10em;
+	overflow: auto;
+}

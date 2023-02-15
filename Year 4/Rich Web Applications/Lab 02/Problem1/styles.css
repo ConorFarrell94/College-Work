@@ -1,0 +1,53 @@
+/* removing the arrow display that shows up when you set an input as number */
+.no-arrow {
+	-moz-appearance: textfield;
+}
+.no-arrow::-webkit-inner-spin-button {
+	display: none;
+}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* going for a simple dark mode look */
+body {
+	background-color: black;
+	color: white;
+}
+.container {
+	display: table;
+	justify-content: center;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+::placeholder {
+	color: white;
+	opacity: 1;
+}
+input {
+	background-color: #212121;
+	color: white;
+	padding: 10px;
+	margin: 10px 0;
+	color: white;
+}
+input:focus {
+	background-color: royalblue;
+}
+button {
+	background-color: #212121;
+	color: white;
+}
+button:focus {
+	background-color: royalblue;
+}
+button:hover {
+	background-color: royalblue;
+}
+/*tr:nth-of-type(odd) {*/
+/*    background-color:#f2f2f2;*/
+/*    color: black;*/
+/*}*/
