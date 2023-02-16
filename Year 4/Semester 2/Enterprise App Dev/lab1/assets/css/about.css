@@ -1,19 +1,19 @@
-.flow-in{
-    position: relative;
-    animation-name: float-in;
-    animation-duration: 2s;
+.flow-in {
+	position: relative;
+	animation-name: float-in;
+	animation-duration: 2s;
 }
 .text-center {
-    position: relative;
-    animation-name: float-in;
-    animation-duration: 2s;
+	position: relative;
+	animation-name: float-in;
+	animation-duration: 2s;
 }
 
 @keyframes float-in {
-    from {
-        left: -100%;
-    }
-    to {
-        left: 0;
-    }
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0;
+	}
 }
