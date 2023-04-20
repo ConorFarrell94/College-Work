@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Node.js JSON server</title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<link href="./css/global.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body id="body">
+		<div id="headerInfo">
+			<h1>Combined JSON data</h1>
+			<p>
+				This website utilizes AJAX technology to access JSON objects, AJAX is a
+				technology based on JavaScript that allows for dynamic loading of data
+				without having to reload the entire page
+			</p>
+			<p>
+				JSON data is loaded from a Node.js server, which is a server-side
+				technology that allows for dynamic loading of data from a database or a
+				file system
+			</p>
+		</div>
+		<div id="data">
+			<button
+				id="show-all-btn"
+				class="topBtn"
+				onclick="createAll()"
+				style="display: none"
+			>
+				Show all
+			</button>
+			<button
+				id="show-first-20-btn"
+				class="topBtn"
+				onclick="createTwenty()"
+				style="display: none"
+			>
+				Show first 20
+			</button>
+			<table id="myTable">
+				<button id="genData" class="topBtn" onclick="genData()">
+					Generate Data
+				</button>
+				<thead style="display: none">
+					<tr>
+						<th>Country</th>
+						<th>City</th>
+						<th>Continent</th>
+						<th>Coastline</th>
+						<th>Currency</th>
+						<th>TLD</th>
+						<th>Flag</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div id="effectButtons">
+			<button id="toggle-mode-button" class="bottomBtn">light/dark</button>
+			<button id="animate-button" class="bottomBtn">fade in</button>
+			<button id="increase-font-button" class="bottomBtn">bigger font</button>
+			<button id="decrease-font-button" class="bottomBtn">smaller font</button>
+			<button id="toggle-div-button" class="bottomBtn">toggle header</button>
+			<button id="change-font-color-button" class="bottomBtn">
+				font color
+			</button>
+		</div>
+
+		<script>
+			function createAll() {
+				$(document).ready(() => {
+					$.get("http://localhost:3000/data", (data) => {
+						const JSONData = JSON.parse(data.message);
+						createFullTable(JSONData);
+					});
+				});
+			}
+			function createTwenty() {
+				$(document).ready(() => {
+					$.get("http://localhost:3000/data", (data) => {
+						const JSONData = JSON.parse(data.message);
+						createTwentyTable(JSONData);
+					});
+				});
+			}
+			function genData() {
+				$(document).ready(() => {
+					$.get("http://localhost:3000/data", (data) => {
+						var genBtn = document.querySelector("#genData");
+						var showAllBtn = document.querySelector("#show-all-btn");
+						var first20Btn = document.querySelector("#show-first-20-btn");
+						var tableHeader = document.querySelector("thead");
+						genBtn.style.display = "none";
+						var p = document.createElement("p");
+						p.textContent = "-- Generating data --";
+						document.getElementById("data").appendChild(p);
+						const JSONData = JSON.parse(data.message);
+						setTimeout(function () {
+							tableHeader.style.display = "";
+							createTwentyTable(JSONData);
+							timeTakentoLoad();
+							document.getElementById("data").removeChild(p);
+							showAllBtn.style.display = "block";
+							first20Btn.style.display = "block";
+						}, 5000);
+					});
+				});
+			}
+			function timeTakentoLoad() {
+				$(document).ready(() => {
+					$.get("http://localhost:3000/data", (data) => {
+						var myHeading = document.createElement("h4");
+						var myVariable =
+							"Server took: " +
+							data.timeTaken +
+							" to combine and load JSON data";
+						var myText = document.createTextNode(myVariable);
+						myHeading.appendChild(myText);
+						document.getElementById("data").appendChild(myHeading);
+					});
+				});
+			}
+		</script>
+		<script src="./js/scripts.js"></script>
+	</body>
+</html>

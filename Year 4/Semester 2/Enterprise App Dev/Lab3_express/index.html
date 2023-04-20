@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>C19704439</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery.fancytable/dist/fancyTable.min.js"></script>
+	</head>
+	<style>
+		body {
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #181818;
+			color: #fff;
+		}
+		#tableContainer {
+			padding: 5%;
+		}
+		/* Style for table */
+		#colorsTable {
+			margin: 0 auto;
+			width: 100%;
+			font-size: 1.2rem;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		#colorsTable thead {
+			position: sticky;
+			top: 0;
+			background-color: #f2f2f2;
+		}
+
+		#colorsTable th,
+		#colorsTable td {
+			padding: 12px 15px;
+			text-align: center;
+		}
+
+		#colorsTable th {
+			background-color: #3399ff;
+			color: #fff;
+			font-weight: bold;
+		}
+
+		#colorsTable tbody tr:nth-child(even) {
+			background-color: #838383;
+		}
+		#colorsTable tbody tr:nth-child(odd) {
+			background-color: #4e4e4e;
+		}
+
+		#colorsTable tbody tr:hover {
+			background-color: #181818;
+		}
+
+		#colorsTable td:first-child {
+			font-weight: bold;
+		}
+
+		/* Style for pagination buttons */
+		.pag {
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+		}
+
+		.pag a {
+			display: inline-block;
+			padding: 10px;
+			margin: 0 5px;
+			color: #333;
+			background-color: #fff;
+			border: 1px solid #333;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+
+		.pag a:hover {
+			color: #fff;
+			background-color: #333;
+		}
+
+		.pag .active {
+			color: #fff;
+			background-color: #3399ff;
+		}
+
+		.pag .disabled {
+			color: #ccc;
+			border-color: #ccc;
+			cursor: not-allowed;
+		}
+
+		/* Style for input box */
+		.fancySearchRow > th:nth-child(1) > input:nth-child(1) {
+			background-color: #181818;
+			color: #fff;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			padding: 10px;
+			width: 100%;
+		}
+
+		/* Style for buttons */
+		.deleteRowButton {
+			background-color: #f44336;
+			color: #fff;
+			border: none;
+			padding: 8px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.deleteRowButton:hover {
+			background-color: #d32f2f;
+		}
+
+		#addRowButton {
+			background-color: #4caf50;
+			color: #fff;
+			border: none;
+			padding: 8px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		#addRowButton:hover {
+			background-color: #388e3c;
+		}
+
+		#saveButton {
+			background-color: #4caf50;
+			color: #fff;
+			border: none;
+			padding: 8px 12px;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		#saveButton:hover {
+			background-color: #388e3c;
+		}
+	</style>
+	<body>
+		<h1>256-Colors Library</h1>
+		<p>
+			This is a simple library of 256 colors. You can add, edit, search and
+			delete colors.
+		</p>
+		<p>
+			To edit a color, simply click on the cell and type in the new value. Be
+			sure to save your changes.
+		</p>
+		<div id="tableContainer">
+			<table id="colorsTable">
+				<thead>
+					<tr>
+						<th>colorId</th>
+						<th>hexString</th>
+						<th>hsl</th>
+						<th>rgb</th>
+						<th>name</th>
+						<th>color (hex values)</th>
+						<th>action</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+			<button id="addRowButton">Add Row</button>
+			<button id="saveButton">Save Changes</button>
+		</div>
+
+		<script>
+			$(document).ready(() => {
+				const tableDataCookie = document.cookie
+					.split(";")
+					.find((cookie) => cookie.trim().startsWith("tableData="));
+				if (tableDataCookie) {
+					const tableData = JSON.parse(tableDataCookie.split("=")[1]);
+					tableData.forEach((item) => {
+						$("#colorsTable tbody").append(
+							`<tr data-colorid="${item.colorId}">
+          <td contenteditable>${item.colorId}</td>
+          <td contenteditable>${item.hexString}</td>
+          <td contenteditable>${item.hsl.h.toFixed(0)}, ${item.hsl.s.toFixed(
+								0
+							)}, ${item.hsl.l.toFixed(0)}</td>
+          <td contenteditable>${item.rgb.r.toString()}, ${item.rgb.g.toString()}, ${item.rgb.b.toString()}</td>
+          <td contenteditable>${item.name}</td>
+		  <td style="background-color:${item.hexString};"></td>
+          <td><button class="deleteRowButton">Delete</button></td>
+        </tr>`
+						);
+					});
+				} else {
+					// load data from server and populate table
+					$.get("http://localhost:3000/data", (data) => {
+						console.log(data);
+						data.forEach((item) => {
+							$("#colorsTable tbody").append(
+								`<tr data-colorid="${item.colorId}">
+                <td contenteditable>${item.colorId}</td>
+                <td contenteditable>${item.hexString}</td>
+                <td contenteditable>${item.hsl.h.toFixed(
+									0
+								)}, ${item.hsl.s.toFixed(0)}, ${item.hsl.l.toFixed(0)}</td>
+                <td contenteditable>${item.rgb.r.toString()}, ${item.rgb.g.toString()}, ${item.rgb.b.toString()}</td>
+                <td contenteditable>${item.name}</td>
+				<td style="background-color:${item.hexString};"></td>
+                <td><button class="deleteRowButton">Delete</button></td>
+              </tr>`
+							);
+						});
+
+						$("#addRowButton").click(function () {
+							// Create a new row with empty cells
+							const newRow = $("<tr>", { "data-colorid": "" })
+								.append($("<td>", { contenteditable: true }))
+								.append($("<td>", { contenteditable: true }))
+								.append($("<td>", { contenteditable: true }))
+								.append($("<td>", { contenteditable: true }))
+								.append($("<td>", { contenteditable: true }))
+								.append(
+									$("<td>").append(
+										$("<button>", { class: "deleteRowButton" }).text("Delete")
+									)
+								);
+							// Add the new row to the table body
+							$("#colorsTable tbody").append(newRow);
+							// Show the popup
+							alert(
+								"Remember to click the 'Save Changes' button to save your new data."
+							);
+						});
+						$("#colorsTable").fancyTable({
+							pagination: true,
+							perPage: 10,
+							searchable: true,
+							globalSearch: true,
+						});
+					});
+
+					// add event listener for delete button
+					$("#colorsTable").on("click", ".deleteRowButton", function () {
+						$(this).closest("tr").remove();
+					});
+
+					// add event listener for save button
+					$("#saveButton").click(function () {
+						const data = [];
+
+						// iterate over each row and create an object
+						$("#colorsTable tbody tr").each(function () {
+							const colorId = $(this).find("td:first-child").text();
+							const hexString = $(this).find("td:nth-child(2)").text();
+							const hsl = $(this).find("td:nth-child(3)").text().split(",");
+							const rgb = $(this).find("td:nth-child(4)").text().split(",");
+							const name = $(this).find("td:nth-child(5)").text();
+
+							data.push({
+								colorId: colorId,
+								hexString: hexString,
+								hsl: {
+									h: parseInt(hsl[0].trim()),
+									s: parseInt(hsl[1].trim()),
+									l: parseInt(hsl[2].trim()),
+								},
+								rgb: {
+									r: parseInt(rgb[0].trim()),
+									g: parseInt(rgb[1].trim()),
+									b: parseInt(rgb[2].trim()),
+								},
+								name: name,
+							});
+						});
+
+						// set a cookie with the table data
+						document.cookie = `tableData=${JSON.stringify(data)}`;
+
+						// send data to server
+						$.ajax({
+							url: "http://localhost:3000/save",
+							type: "POST",
+							data: JSON.stringify(data),
+							contentType: "application/json",
+							success: function (response) {
+								alert(response);
+							},
+							error: function (xhr, status, error) {
+								alert(error);
+							},
+						});
+					});
+				}
+			});
+		</script>
+	</body>
+</html>
