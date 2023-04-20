@@ -1,4 +1,0 @@
-10ms shaved off after creating the index for lastname
-
-
-date of birth assigned: 1973-12-02

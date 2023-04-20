@@ -1,3 +1,0 @@
-ssh -p 2222 conor@192.168.0.180
-
-pg_ctl -D /usr/local/pgsql/data start
