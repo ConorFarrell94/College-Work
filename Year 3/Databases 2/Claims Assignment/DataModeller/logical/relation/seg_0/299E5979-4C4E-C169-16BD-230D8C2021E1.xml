@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ExpertReport" directorySegmentName="seg_0" id="299E5979-4C4E-C169-16BD-230D8C2021E1">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:54:30 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>0C8FB219-6C16-34B1-2ACB-AEC21D3529ED</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1FD9E9DC-16FB-2955-5785-D8E9B53CE1A6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DCFEC805-9E6A-7A5A-7725-3674C18F254C" name="STAFF">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>2DCDC0C0-96A1-1E99-D066-2B4BE8ABD0A1</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="SNO" id="7B0C5872-2F25-77B6-3710-6E72D2750900">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>CCA80E2A-E475-7E36-3EE3-33A556957B36</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SNAME" id="F02E6CBD-074B-D48D-D189-281FD9F3E758">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>BDC70F0B-6284-E2FC-BCC7-F793B413C502</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SROLE" id="176982FA-925C-CC4E-9F1B-67CF0E21F863">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>5EF00CC4-1CEC-29D7-1528-45EA04DAFC3F</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="53B3C612-74DA-9AA9-4E04-8D4DA4571164" name="STAFF_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>10D9ECFC-C2FD-D7D0-6D11-5BD2643A437B</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B0C5872-2F25-77B6-3710-6E72D2750900"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

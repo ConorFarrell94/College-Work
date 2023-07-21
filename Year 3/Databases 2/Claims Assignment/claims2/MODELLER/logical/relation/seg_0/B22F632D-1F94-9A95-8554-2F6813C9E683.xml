@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLAIM_TO_STAFF" directorySegmentName="seg_0" id="B22F632D-1F94-9A95-8554-2F6813C9E683">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:49:00 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>E0D03CBD-52C8-7492-DBB9-D4F3B64BE87C</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>2DCDC0C0-96A1-1E99-D066-2B4BE8ABD0A1</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

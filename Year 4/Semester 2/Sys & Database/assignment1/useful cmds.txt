@@ -1,0 +1,15 @@
+psql -h localhost -p 5432 -U postgres
+
+sudo systemctl restart postgresql
+
+cd /usr/lib/postgresql/15/bin/pgaudit
+
+cd /etc/postgresql/15/main
+
+/var/log/postgresql/postgresql-15-main.log
+
+PGAUDIT
+sudo su postgres
+cd /var/lib/postgresql/15/main/
+cat current_logfiles
+

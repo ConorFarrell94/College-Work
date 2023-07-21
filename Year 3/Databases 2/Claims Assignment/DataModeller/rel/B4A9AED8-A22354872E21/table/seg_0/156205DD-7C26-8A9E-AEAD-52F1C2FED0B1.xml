@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="156205DD-7C26-8A9E-AEAD-52F1C2FED0B1" name="Accident">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>B1D8C3FD-4484-59AC-65FD-C2B6A1905FEC</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCIDENT_KEY" id="62280B63-6988-48BC-6675-28575909F6A2">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="A_DATE" id="B0608E33-10F9-4E48-6EC4-36416BF4DB7D">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>668F52DF-1CF0-7FBB-C6E8-B61031845B94</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_DESCRIPTION" id="13BF5731-D594-CD72-8455-379CA8E4B0BE">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>7DA899DC-FE53-5EDA-79AD-ABCA76E5A22A</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_LOCATION" id="98930BCF-24F3-CDE5-7A22-7E5CB950289A">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>1A95D996-6E37-C046-8A2F-1270C7829364</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A8C98AFC-B9E2-2D8A-89C3-772DCF84A986" name="Accident_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="62280B63-6988-48BC-6675-28575909F6A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

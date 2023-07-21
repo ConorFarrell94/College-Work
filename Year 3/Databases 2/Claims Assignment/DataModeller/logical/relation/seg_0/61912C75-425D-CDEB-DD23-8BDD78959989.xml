@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="AccidentClaim" directorySegmentName="seg_0" id="61912C75-425D-CDEB-DD23-8BDD78959989">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:37:38 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B1D8C3FD-4484-59AC-65FD-C2B6A1905FEC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4B3B4E0F-0789-F906-B4EC-30CE4B343DE9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

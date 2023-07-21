@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="StaffAccident" directorySegmentName="seg_0" id="70AB1283-462F-4BE1-D002-4990F369FF1A">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:06 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>B1D8C3FD-4484-59AC-65FD-C2B6A1905FEC</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AA26F984-038B-CEB8-DCF3-4E0D3239E2C0</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

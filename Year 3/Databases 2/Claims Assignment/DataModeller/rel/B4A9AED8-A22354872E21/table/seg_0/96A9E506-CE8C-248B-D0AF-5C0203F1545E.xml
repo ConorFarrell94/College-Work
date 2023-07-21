@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96A9E506-CE8C-248B-D0AF-5C0203F1545E" name="Claimant_Claim">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Claimant_CLAIMENT_ID" id="C1B92FE2-209C-B491-2330-C0DCDB052CFE">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="47E52DEA-3194-DA2E-F3BD-F0BF7505ED1A" referredColumn="B0A64D70-009C-96B5-4EA0-3A61D55A2DF9"/>
+</associations>
+</Column>
+<Column name="Claim_CL_KEY" id="4364B9B6-B8B5-19AD-F54B-3A6EBB93DCD4">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E8AFC0F8-40EC-652C-8445-B23516A1A809" referredColumn="3336DF2B-B1F2-9A1E-D883-861306778946"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2F997F91-C666-784D-C743-B726D6D5FC4D" name="Claimant_Claim_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1B92FE2-209C-B491-2330-C0DCDB052CFE"/>
+<colUsage columnID="4364B9B6-B8B5-19AD-F54B-3A6EBB93DCD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="66348A2C-5ECC-D481-6226-4C8537E17A3C" name="Claimant_Claim_Claimant_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>09371A38-634E-57F8-3927-EE8D53DCD99A</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1B92FE2-209C-B491-2330-C0DCDB052CFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D4ACDE70-867C-8C2A-A4E4-BE27AA6C2C4C" name="Claimant_Claim_Claim_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>09371A38-634E-57F8-3927-EE8D53DCD99A</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4364B9B6-B8B5-19AD-F54B-3A6EBB93DCD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

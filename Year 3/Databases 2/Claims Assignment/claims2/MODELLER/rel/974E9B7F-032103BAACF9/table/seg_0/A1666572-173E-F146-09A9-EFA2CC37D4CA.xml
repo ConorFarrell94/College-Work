@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A1666572-173E-F146-09A9-EFA2CC37D4CA" name="EXPERTS">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>1FCB5F17-A73C-5BED-8AEF-71E6ED1B2B73</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXNO" id="DF7E86DC-C111-AFF1-9322-0DB72438328A">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>BF5B4723-CCA4-B2C0-CB98-D8020B4C1B36</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXNAME" id="9C497065-A13C-429B-ED4F-FDC36F59FD99">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>BFA370F1-000A-7E09-A65F-C2686ED6E81B</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXADDRESS" id="519F6A2C-5EE6-90B0-3ACA-879F171CFB2A">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>3401F471-8368-44AD-E1BA-2BE5229F93B5</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXAREA" id="54F5EE96-923A-5AB5-8D71-D408D69AE844">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>E2DD89CF-57D5-4251-8D7E-3CA9949E9997</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DDDE190F-4F39-55A1-2A56-88F25400FDA2" name="EXPERTS_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>BCB29F81-183C-3A90-8FBA-2356B67674F6</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DF7E86DC-C111-AFF1-9322-0DB72438328A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

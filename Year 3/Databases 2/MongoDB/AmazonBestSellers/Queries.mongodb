@@ -1,0 +1,51 @@
+use ("AmazonBestSellers");
+
+// // Show me everything
+// db.datav2.find();
+
+// // Show me any books by this Author
+// db.datav2.find({"Author" : "Steve Harvey"})
+
+// // Show all Non Fiction Books by any author
+// db.datav2.aggregate(
+//   { $match : { 
+//      "Books.Genre": "Non Fiction"
+//   }})
+
+// // Only show me books from the year 2009
+// db.datav2.aggregate([{
+//     $unwind:"$Books"},
+//     {$match:{"Books.Year":2009}}])
+
+// // Find all Authors that have written 6 or more books
+// db.datav2.find({'Books.6': {$exists: true}})
+
+// // PROJECTION Only show me the years that the Authors released books in
+// db.datav2.find( { "Books.Year" : {$exists : true} }, {"Books.Name": 0, "Books.Genre": 0, "Books.Price": 0, "Books.Reviews": 0, "Books.UserRating": 0}  )
+
+// // SORT the Authors into alphabetical order
+// db.datav2.aggregate(
+//   { $sort : { "Author" : 1 } }
+// );
+
+// // AGGREGATE Show me the names of all the fiction books
+// db.datav2.aggregate( [
+//     { $sort : { "Books.Name" : 1 } },
+//     { $match: { "Books.Genre": "Non Fiction" } },
+//     { $group: { _id: "$Books.Name" } }
+// ] )
+
+// // Inserting a new Document with "Test Author" who has written two books
+// db.datav2.insertOne( {"Author": "Test Author", "Books": 
+// [ { "Name": "Book 1", "Price": 25, "Year": 2021, "Genre": "Fiction", "Reviews": 1, "UserRating": 5 },
+//  { "Name": "Book 2", "Price": 5, "Year": 2021, "Genre": "Non Fiction", "Reviews": 15, "UserRating": 2.5 } ] } );
+
+// // Updating our Authors name
+// db.datav2.findOneAndUpdate({"Author": "Test Author"},
+    // {$set: {"Author": "Updated Author"}})
+
+// // Deleting our newly modified Author
+// db.datav2.deleteOne({"Author" : "Updated Author"})
+
+// // Validates the collection for correctness
+// db.datav2.validate( { full: true } )

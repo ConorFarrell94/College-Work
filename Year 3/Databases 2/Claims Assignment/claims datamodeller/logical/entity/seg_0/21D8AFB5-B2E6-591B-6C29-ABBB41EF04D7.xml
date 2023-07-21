@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="21D8AFB5-B2E6-591B-6C29-ABBB41EF04D7" name="CLAIMANT">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:13:14 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CLAIMANT_ID" id="8864BC3A-BA38-0DE5-6C2B-F94705095F43">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:13:34 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CL_NAME" id="2243BE7A-5613-E7C5-98CD-B3310E5B8D95">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:13:49 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CL_ADDR" id="132E9E50-0F7F-6797-4107-03ADB66C724C">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:13:57 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CL_DOB" id="4631419E-F096-4DC0-75B5-83A45059F685">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:14:07 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="62B5ADB9-A4FC-0FC7-0581-BB19AAF93EEE" name="CLAIMANT PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:13:46 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8864BC3A-BA38-0DE5-6C2B-F94705095F43</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

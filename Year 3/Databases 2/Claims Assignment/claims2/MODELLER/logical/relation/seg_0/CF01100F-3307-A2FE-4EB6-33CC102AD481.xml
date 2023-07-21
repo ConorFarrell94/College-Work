@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLAIM_TO_DESC" directorySegmentName="seg_0" id="CF01100F-3307-A2FE-4EB6-33CC102AD481">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:48:41 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<sourcePk>5D26FB6E-EB91-570E-782A-AFB01F4975FD</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>77BBFC7B-CFD8-FDE5-28DD-8FB334758256</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>E0D03CBD-52C8-7492-DBB9-D4F3B64BE87C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5C322B2D-188C-D46A-5B94-88D3EE34A923" name="StaffAccident">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Accident_ACCIDENT_KEY" id="715447B5-692E-8EED-5DBF-F3853135A641">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C705F7EE-C97E-1F84-58B0-0FFB992FCCED" referredColumn="62280B63-6988-48BC-6675-28575909F6A2"/>
+</associations>
+</Column>
+<Column name="Staff_STAFF_NO" id="F3F123E6-468D-0A61-FE95-3A71B12C9124">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BCDC7022-BFE9-9FD2-5BB8-2D1F1E7F07B5" referredColumn="CF58FD3C-2940-3730-58E0-AD6C07CA8302"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7E6B376C-5FFA-4434-215D-E7DD5DD24B34" name="StaffAccident_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="715447B5-692E-8EED-5DBF-F3853135A641"/>
+<colUsage columnID="F3F123E6-468D-0A61-FE95-3A71B12C9124"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1335205C-16EF-60F9-6BE3-EE4BB7184C07" name="StaffAccident_Accident_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<generatorID>70AB1283-462F-4BE1-D002-4990F369FF1A</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="715447B5-692E-8EED-5DBF-F3853135A641"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EA312722-F5EA-4726-0155-832804B79DD5" name="StaffAccident_Staff_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<generatorID>70AB1283-462F-4BE1-D002-4990F369FF1A</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3F123E6-468D-0A61-FE95-3A71B12C9124"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FDA69297-D059-BB49-7E31-71F44122BC9B" name="PAYMENT_TO_CLAIM">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENTS_PNO" id="2C2F2DE2-9F97-9AE0-6632-0ABAC5C3570B">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9122040C-02DC-212F-A464-2B3434CD3DC8" referredColumn="49A13A57-4DA9-58C8-A2A5-5776FFC31FC2"/>
+</associations>
+</Column>
+<Column name="CLAIM_CLNO" id="E59B3A3C-5EA4-9F9F-3952-C9045A436FF8">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="807EA987-5B13-FCD0-5AC2-64398AF3B0E5" referredColumn="717B88D6-81F3-38D9-CABD-AC19A094447A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E80B7689-E102-ABFE-E010-99AC7FB52CBE" name="PAYMENT_TO_CLAIM_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C2F2DE2-9F97-9AE0-6632-0ABAC5C3570B"/>
+<colUsage columnID="E59B3A3C-5EA4-9F9F-3952-C9045A436FF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92454269-BF18-7541-18F7-C22EC74E7561" name="PAYMENT_TO_CLAIM_PAYMENTS_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>6B209188-180C-7008-8F63-287BBCC687E4</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2C2F2DE2-9F97-9AE0-6632-0ABAC5C3570B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDE4151E-D06F-91E0-409C-85371C8A66B3" name="PAYMENT_TO_CLAIM_CLAIM_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>6B209188-180C-7008-8F63-287BBCC687E4</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E59B3A3C-5EA4-9F9F-3952-C9045A436FF8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

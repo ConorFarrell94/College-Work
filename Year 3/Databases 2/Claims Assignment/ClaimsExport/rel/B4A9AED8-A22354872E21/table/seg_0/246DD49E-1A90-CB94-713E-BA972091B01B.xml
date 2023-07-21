@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="246DD49E-1A90-CB94-713E-BA972091B01B" name="ClaimPayment">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Claim_CL_KEY" id="7B9A1698-20BC-44B6-F211-D48175BC156B">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4DD1CA5E-63C5-D9AC-E576-EE316E42217A" referredColumn="3336DF2B-B1F2-9A1E-D883-861306778946"/>
+</associations>
+</Column>
+<Column name="Payment_PAYMENT_NO" id="6745E056-DD53-81B2-B8FA-000AB23C8AEE">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8FE33142-1CF2-1C45-7AAF-213E178F4475" referredColumn="938F946F-BC46-F02E-D5DD-2FE9DBCE2E7C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="23C18178-60C1-2A18-E842-3D567F3C5484" name="ClaimPayment_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B9A1698-20BC-44B6-F211-D48175BC156B"/>
+<colUsage columnID="6745E056-DD53-81B2-B8FA-000AB23C8AEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7C426E8A-45C4-E0E6-084F-FEEA313D90CC" name="ClaimPayment_Claim_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>90A3693D-AD7C-ED96-AA43-7CDE0F078FA4</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B9A1698-20BC-44B6-F211-D48175BC156B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB156335-966E-586F-E18E-1D8DB2060693" name="ClaimPayment_Payment_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>90A3693D-AD7C-ED96-AA43-7CDE0F078FA4</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6745E056-DD53-81B2-B8FA-000AB23C8AEE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A5182549-8E9E-FE17-EC11-642B1CB73436" name="EXPERT_REPORT">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:22:16 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="DATE_REQUESTED" id="18FEB96A-2CE5-B560-850F-517432A5F802">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:22:24 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATE_SUBMITTED" id="57286CB8-9FEE-A602-1C53-65A4A6B85CF1">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:22:39 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REPORT_CONTENT" id="F8360FAC-4B06-DC2A-F996-6DB30A22DCE3">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:22:48 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

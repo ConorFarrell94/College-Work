@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6A96CAE-7154-D530-08D6-9C7463EC69DA" name="ExpertAccident">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Expert_Expert_ID" id="D53CBC4E-5958-6DDB-FB8A-B567B543B2A1">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D90FCBF1-674A-3535-A9DC-A4E389C62023" referredColumn="394CCE23-437A-28FE-64B1-7D8E15B167B7"/>
+</associations>
+</Column>
+<Column name="Accident_Accident_ID" id="16D421D0-849C-7BF4-B274-A7701237CFB1">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0C4EF2C-EA5E-1390-6A11-3E0B397C6B52" referredColumn="62280B63-6988-48BC-6675-28575909F6A2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="304AC0AB-6843-9E67-E879-80226CEAF74A" name="ExpertAccident_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D53CBC4E-5958-6DDB-FB8A-B567B543B2A1"/>
+<colUsage columnID="16D421D0-849C-7BF4-B274-A7701237CFB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A4A56F83-36D2-0F85-2124-4903712E88EB" name="ExpertAccident_Expert_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<generatorID>F5EF12C6-129F-7E67-DD20-9224132A4BF8</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D53CBC4E-5958-6DDB-FB8A-B567B543B2A1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3E1D3D5-666E-1DB8-6687-00BEAA83F3A8" name="ExpertAccident_Accident_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<generatorID>F5EF12C6-129F-7E67-DD20-9224132A4BF8</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16D421D0-849C-7BF4-B274-A7701237CFB1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

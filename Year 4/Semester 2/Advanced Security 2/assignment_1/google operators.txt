@@ -1,0 +1,25 @@
+1. Basic Operators:
++
+*
+-
+""
+~
+|
+.
+OR
+2. Advanced Operators:
+Allintext
+Define
+Intitle
+Site
+allintitle
+filetype
+inurl
+numrange
+allinurl
+info
+link
+daterange
+cache
+intext
+related

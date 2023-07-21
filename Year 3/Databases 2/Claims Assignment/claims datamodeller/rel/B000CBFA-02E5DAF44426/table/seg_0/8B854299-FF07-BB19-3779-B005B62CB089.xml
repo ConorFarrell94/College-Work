@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8B854299-FF07-BB19-3779-B005B62CB089" name="EXPERT_REPORT">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>A5182549-8E9E-FE17-EC11-642B1CB73436</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DATE_REQUESTED" id="A08F6A3F-F120-C135-C0CB-4AB8355E0DCC">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>18FEB96A-2CE5-B560-850F-517432A5F802</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATE_SUBMITTED" id="654F61A4-1D61-6425-DD42-D08D59409856">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>57286CB8-9FEE-A602-1C53-65A4A6B85CF1</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPORT_CONTENT" id="8A3E6ABE-A7E9-EA5C-0670-30C25A3DCE71">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>F8360FAC-4B06-DC2A-F996-6DB30A22DCE3</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPERT_REPORT_ID" id="430D4C3E-1CC5-CA32-4F41-E956FBDDA957">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C9FBCA9E-5DF1-F461-6C13-AAB6EE3B4DA8" name="EXPERT_REPORT_PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="430D4C3E-1CC5-CA32-4F41-E956FBDDA957"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

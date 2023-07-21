@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7FC2465E-C2D2-ED37-2A16-AFA402401B34" name="EXPERTS">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:19:36 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EXPERT_ID" id="F41015F2-1B50-2C80-B6AD-577431430731">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:19:43 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="E_NAME" id="526356E7-A415-423E-1CF4-C709FE42FDF7">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:19:58 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="E_ADDR" id="0253B410-9D9E-99A1-E29D-44E99549A3B2">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:20:06 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="E_EXPERTISE" id="676C5109-0481-9FAE-A796-30B9744095E9">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:20:15 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CL_KEY" id="32EEDEC5-38E9-C8AD-3A8A-650F201D7DB0">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:53:10 UTC</createdTime>
+<generatorID>20C78D01-58A6-875B-E297-B90E1E1BD87B</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>E01D27DA-3031-6F18-EE2B-28A40633BA23</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C46D834D-7C62-BE51-5DF2-2BF95DC8937A" name="EXPERTS PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:19:57 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="B000CBFA-5120-B9B5-24A4-02E5DAF44426" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F41015F2-1B50-2C80-B6AD-577431430731</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

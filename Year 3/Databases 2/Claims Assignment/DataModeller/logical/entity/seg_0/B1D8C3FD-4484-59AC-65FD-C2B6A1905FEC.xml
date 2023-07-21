@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B1D8C3FD-4484-59AC-65FD-C2B6A1905FEC" name="Accident">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:11:11 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ACCIDENT_KEY" id="A20A062B-D340-8196-497F-00EA368912D6">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:12:34 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="A_DATE" id="668F52DF-1CF0-7FBB-C6E8-B61031845B94">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:13:14 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="A_DESCRIPTION" id="7DA899DC-FE53-5EDA-79AD-ABCA76E5A22A">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:13:44 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="A_LOCATION" id="1A95D996-6E37-C046-8A2F-1270C7829364">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:18:04 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64</dataTypeSize>
+<ownDataTypeParameters>64,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

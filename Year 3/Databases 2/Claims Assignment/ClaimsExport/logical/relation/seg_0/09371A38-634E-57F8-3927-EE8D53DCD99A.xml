@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Claimant_Claim" directorySegmentName="seg_0" id="09371A38-634E-57F8-3927-EE8D53DCD99A">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:36:54 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>C048F31A-7391-E4F2-7D00-7833FE7042C4</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4B3B4E0F-0789-F906-B4EC-30CE4B343DE9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

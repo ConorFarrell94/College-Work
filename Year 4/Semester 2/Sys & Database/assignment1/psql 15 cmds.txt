@@ -1,0 +1,26 @@
+sudo apt update
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+
+wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+
+sudo apt-get -y install postgresql
+
+sudo service postgresql start
+
+sudo -u postgres psql
+
+SHOW data_directory;
+/var/lib/postgresql/15
+
+ALTER USER postgres WITH PASSWORD 'pass';
+
+sudo find / -name pg_hba.conf
+sudo nano /etc/postgresql/15/main/pg_hba.conf
+host    all             all             192.168.0.0/16          trust
+host    all             all             0.0.0.0/0               trust
+
+sudo nano /etc/postgresql/15/main/postgresql.conf
+changes listen addresses to '*'
+
+sudo systemctl restart postgresql

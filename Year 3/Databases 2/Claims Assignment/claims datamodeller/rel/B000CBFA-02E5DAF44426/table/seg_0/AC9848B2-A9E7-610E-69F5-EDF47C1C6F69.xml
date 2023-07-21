@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC9848B2-A9E7-610E-69F5-EDF47C1C6F69" name="Accident">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>26CEDD44-C895-78C9-0C6F-BED64BB68F26</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ACCIDENT_KEY" id="808A811F-88A6-FF92-093C-DD198C96D62F">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>D86F3D91-B87F-2CA3-61D0-FDA068EC6EAF</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_DATE" id="5BD33AFD-E568-2108-8CEA-F774EAA94D1D">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>9ED622AA-EF49-C32C-B476-6D76076F6BD5</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_DESCRIPTION" id="F2B6C30A-AB03-82AF-E059-72FB6B688DFE">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>BF95A11C-4EAD-C4D4-0662-7A8E3E3B5297</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="A_LOCATION" id="02483ECC-54E8-0897-0300-C329559B7319">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>EDEDD094-AB94-9B37-FBA6-955E2AF0BC4E</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F7840686-FA4F-8C4B-082D-DA6807EC607C" name="Accident_PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>56CAAB65-50FB-68B9-3FCF-F19B5F4C61DF</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="808A811F-88A6-FF92-093C-DD198C96D62F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

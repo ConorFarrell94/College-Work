@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLAIM_TO_EXPERT" directorySegmentName="seg_0" id="7CCD0930-D30C-01DA-957A-08F0B9D2CA14">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:49:33 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>77BBFC7B-CFD8-FDE5-28DD-8FB334758256</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>1FCB5F17-A73C-5BED-8AEF-71E6ED1B2B73</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

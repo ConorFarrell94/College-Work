@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8686B727-12FD-E639-66BE-4B90DEBA95A0" name="CLAIMANT_TO_CLAIM">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CLAIMANT_CNO" id="2083DE87-66EB-C3D8-B398-4E33CF241289">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48551F12-3E69-B44A-CB3B-1A6A9BF8008C" referredColumn="C229E315-86BE-AF6C-7B56-E572981FCC12"/>
+</associations>
+</Column>
+<Column name="CLAIM_CLNO" id="D6B9756C-9443-FDD5-66AE-5CB6808D14DE">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="346CA035-B2F1-768C-C42E-13A50B3E11E5" referredColumn="717B88D6-81F3-38D9-CABD-AC19A094447A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4FA20CD-3524-E49B-13EB-399DFA4E8019" name="CLAIMANT_TO_CLAIM_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2083DE87-66EB-C3D8-B398-4E33CF241289"/>
+<colUsage columnID="D6B9756C-9443-FDD5-66AE-5CB6808D14DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="99A6FFBC-0CA2-2172-A0A7-7551B9A7EBA2" name="CLAIMANT_TO_CLAIM_CLAIMANT_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>3A5AE65B-5FCD-161C-85EC-974C2CD1B4B7</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2083DE87-66EB-C3D8-B398-4E33CF241289"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="18250012-8CFB-A1EB-D081-620CBB81B8B0" name="CLAIMANT_TO_CLAIM_CLAIM_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>3A5AE65B-5FCD-161C-85EC-974C2CD1B4B7</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D6B9756C-9443-FDD5-66AE-5CB6808D14DE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

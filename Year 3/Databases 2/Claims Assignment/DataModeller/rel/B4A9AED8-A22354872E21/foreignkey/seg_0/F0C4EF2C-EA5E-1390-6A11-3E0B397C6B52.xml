@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F0C4EF2C-EA5E-1390-6A11-3E0B397C6B52" containerWithKeyObject="B6A96CAE-7154-D530-08D6-9C7463EC69DA" localFKIndex="B3E1D3D5-666E-1DB8-6687-00BEAA83F3A8" name="ExpertAccident_Accident_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<generatorID>F5EF12C6-129F-7E67-DD20-9224132A4BF8</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<referredTableLongName>Accident</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>156205DD-7C26-8A9E-AEAD-52F1C2FED0B1</referredTableID>
+<keyObject>A8C98AFC-B9E2-2D8A-89C3-772DCF84A986</keyObject>
+<referredKeyID>A8C98AFC-B9E2-2D8A-89C3-772DCF84A986</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ACCIDENT_KEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

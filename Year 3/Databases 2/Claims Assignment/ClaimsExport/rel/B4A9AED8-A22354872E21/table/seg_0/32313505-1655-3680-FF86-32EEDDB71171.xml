@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="32313505-1655-3680-FF86-32EEDDB71171" name="Staff">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>AA26F984-038B-CEB8-DCF3-4E0D3239E2C0</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STAFF_NO" id="CF58FD3C-2940-3730-58E0-AD6C07CA8302">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="STAFF_NAME" id="F75F5C5B-5B0F-0778-8E1F-B58BFCF8358E">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>DD2392E8-A73A-B021-C3E5-6D8122DB3A90</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STAFF_ROLE" id="AA06AB0C-C2C5-00C3-3546-2288B164DAF5">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>689DC03E-BBB7-4744-5BF6-1CD6D3BE310B</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>8 CHAR</dataTypeSize>
+<ownDataTypeParameters>8 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BDE4D229-2185-20E3-F1F5-16235755AE0A" name="Staff_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:50:39 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="CF58FD3C-2940-3730-58E0-AD6C07CA8302"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

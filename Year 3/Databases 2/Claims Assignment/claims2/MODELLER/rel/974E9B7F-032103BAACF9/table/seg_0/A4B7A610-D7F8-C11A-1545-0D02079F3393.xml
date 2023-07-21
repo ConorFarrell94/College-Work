@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A4B7A610-D7F8-C11A-1545-0D02079F3393" name="EXPERTSREPORT">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>F33D7210-5BE4-15E7-8AB2-C1E1C8DBE197</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXRNO" id="A04E6D1C-2094-FFDE-1FD1-9DA32DEA32DD">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>F6AA21FA-C690-7FD3-DC3C-9B0CC76AFCC7</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXRDATE" id="718B7DC4-AD69-9B55-815D-285D72DE8C55">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>C9A8535E-1C40-0225-ED02-92015F51B54F</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXRDESC" id="68D888EE-71CF-2066-2A7B-82970EF4A005">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>27627A9A-5383-07DE-4E07-E3114F04105F</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPERTS_EXNO" id="7F210191-92AE-2567-6BD2-F0BA64DA7D9D">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>33F48D68-5BFA-B645-8425-04A66F89D953</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1C34F611-2167-3908-2DC0-716F43F04A33" referredColumn="DF7E86DC-C111-AFF1-9322-0DB72438328A"/>
+</associations>
+</Column>
+<Column name="CLAIM_CLNO" id="96D62165-B10A-5003-A4E9-51795D64BE27">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>C1B459F6-D254-C571-0AAE-5A41FB54E7A7</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6006C709-04F8-BB02-6CA0-7D018588AE73" referredColumn="717B88D6-81F3-38D9-CABD-AC19A094447A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5436529-2A19-505D-8E3E-E5336F4C60F9" name="EXPERTSREPORT_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>75F76447-A7E5-3D3C-C01C-D0AA316CD30F</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A04E6D1C-2094-FFDE-1FD1-9DA32DEA32DD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B11E6446-32E8-E490-BC04-52730BACBF61" name="EXPERTSREPORT_CLAIM_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>7CDF2A81-810E-7174-495C-D4C5E1C71D70</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96D62165-B10A-5003-A4E9-51795D64BE27"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BD4BB0CB-BC68-98C1-13B2-B49AC7736392" name="EXPERTSREPORT_EXPERTS_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>E9AAF7EF-BDC8-85EC-7DB6-3DF3D6966108</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7F210191-92AE-2567-6BD2-F0BA64DA7D9D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

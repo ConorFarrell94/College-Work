@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4F8B5269-0A2A-E54C-23BB-B50868E596E2" name="EXPERTS">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>7FC2465E-C2D2-ED37-2A16-AFA402401B34</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EXPERT_ID" id="AE595EBD-34B0-B06B-AA0D-72E11FCF29C3">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>F41015F2-1B50-2C80-B6AD-577431430731</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="E_NAME" id="60B03ED6-E403-0ACB-BB3E-A8C20D04793F">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>526356E7-A415-423E-1CF4-C709FE42FDF7</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="E_ADDR" id="045F97E5-51DA-DA2C-514C-0424A322858E">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>0253B410-9D9E-99A1-E29D-44E99549A3B2</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="E_EXPERTISE" id="84BE7025-60CB-860C-DCC7-F5C19AA45326">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>676C5109-0481-9FAE-A796-30B9744095E9</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EXPERT_REPORT_EXPERT_REPORT_ID" id="02616D5B-6BC6-2546-B9AC-AD9C58EADC80">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D4F2B758-39A0-8DFD-98B6-3812DDA55D2B" referredColumn="430D4C3E-1CC5-CA32-4F41-E956FBDDA957"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DC67718E-F749-BA9D-6187-DE8AE0396607" name="EXPERTS_PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>C46D834D-7C62-BE51-5DF2-2BF95DC8937A</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AE595EBD-34B0-B06B-AA0D-72E11FCF29C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="291C02ED-053C-44E0-C22D-615A2E5E91D6" name="EXPERTS_EXPERT_REPORT_FK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>F58CC7E8-7D23-04BE-2811-0CEE450BC9D1</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02616D5B-6BC6-2546-B9AC-AD9C58EADC80"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

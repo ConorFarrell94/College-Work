@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DB41610-FB02-9E07-EF5E-A32769F09003" name="CLAIM_TO_STAFF">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CLAIMDESC_CDNO" id="EE456401-8D96-F329-75FA-C17EA3B722D4">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D9D20C44-C29F-6C36-ACEC-EE451782B8E5" referredColumn="9EA5B924-6B22-8EE6-9ADA-D1B93D05C4AE"/>
+</associations>
+</Column>
+<Column name="STAFF_SNO" id="02FEA3FF-36CC-BA19-A3D3-F7998AD772C3">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F899C034-CF26-9D19-AD13-979EF41B712C" referredColumn="7B0C5872-2F25-77B6-3710-6E72D2750900"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="401E65B2-E176-63F4-AF03-BA43280A50D8" name="CLAIM_TO_STAFF_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE456401-8D96-F329-75FA-C17EA3B722D4"/>
+<colUsage columnID="02FEA3FF-36CC-BA19-A3D3-F7998AD772C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A812BE8E-E13A-F989-06DE-432983C97B6B" name="CLAIM_TO_STAFF_CLAIMDESC_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>B22F632D-1F94-9A95-8554-2F6813C9E683</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE456401-8D96-F329-75FA-C17EA3B722D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8DFFD17C-B67A-28D3-607C-41121AAA4CA4" name="CLAIM_TO_STAFF_STAFF_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>B22F632D-1F94-9A95-8554-2F6813C9E683</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02FEA3FF-36CC-BA19-A3D3-F7998AD772C3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

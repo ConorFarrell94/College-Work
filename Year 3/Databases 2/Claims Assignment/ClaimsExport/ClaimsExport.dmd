@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="ClaimsExport" id="E00A53BA-723C-A3E0-455F-762073A2FF96" version="3.5">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:09:25 UTC</createdTime>
+<ownerDesignName>claims</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>E00A53BA-723C-A3E0-455F-762073A2FF96</designId>
+</OSDM_Design>

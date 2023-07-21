@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1FD9E9DC-16FB-2955-5785-D8E9B53CE1A6" name="Report">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:38:46 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="REPORT_KEY" id="19A45EBD-D1A0-BDD6-DE7D-7112CA7B1B61">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-08 13:25:26 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATEREQUESTED" id="2E8170C8-D48F-2795-C4AD-65FDECE6C947">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:38:59 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DATESUBMITTED" id="5429F89C-3FA3-2A69-FF8B-174ADB6542CD">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:39:11 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="REPORTCONTENT" id="65FCB253-3896-3BBD-2E16-4A2A61D8474B">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:40:06 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

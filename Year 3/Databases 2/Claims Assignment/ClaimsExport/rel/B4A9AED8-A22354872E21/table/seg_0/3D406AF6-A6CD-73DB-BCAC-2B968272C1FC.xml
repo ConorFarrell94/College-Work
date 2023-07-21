@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D406AF6-A6CD-73DB-BCAC-2B968272C1FC" name="Payment">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>ABEBE3CC-2345-33EA-F938-692B1A98C188</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENT_NO" id="938F946F-BC46-F02E-D5DD-2FE9DBCE2E7C">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="P_DATE" id="2DF2912C-D30F-0A70-07A0-5FC117C5EED3">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>308D6B5F-6122-BD51-E6BA-D965DF119333</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_AMOUNT" id="D549199B-01BD-3055-2B2B-D4F25D4A267B">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>83D18BEB-6188-F8A4-D9EB-2C7031F92C48</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_REASON" id="52DE1A14-A4DB-E7D9-74C6-29B3D868011E">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>1487D0DB-FBE7-E935-FFC2-4B96D2A2F08F</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHEQUENO" id="2AC7DCAA-1487-45C7-E124-B37DDFEB2DCF">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>104F6FC1-CAE4-AC72-12D1-B545AA7AA0F1</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CD571EC7-F090-8066-97E5-65BCAA99390D" name="Payment_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="938F946F-BC46-F02E-D5DD-2FE9DBCE2E7C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,134 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="11CD413A-9BA0-050A-12D8-F9B0571A00C1" name="Claim">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>4B3B4E0F-0789-F906-B4EC-30CE4B343DE9</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CL_KEY" id="3336DF2B-B1F2-9A1E-D883-861306778946">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="C_STATE" id="584FB342-FDE8-059A-6A5F-7C250C0A0F81">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>72E7591A-F85F-F690-9A4E-D520B32D5565</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NATUREOFCLAIM" id="D2B068C8-A985-50B1-00A3-1F5973BA270C">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>CEFC474E-DAC2-48EE-9026-B33CC3B907E4</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>64 CHAR</dataTypeSize>
+<ownDataTypeParameters>64 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPORTED" id="401BE1A5-E40C-749F-3001-5C2C49E5B785">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>DBE89BF8-33C6-3D69-1460-2B3B102B4383</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Accident_Accident_ID" id="CF171E83-CDFA-7574-AC08-0F62C31E26FD">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="51C84645-4819-6F89-39C3-1955D0BCF09D" referredColumn="62280B63-6988-48BC-6675-28575909F6A2"/>
+</associations>
+</Column>
+<Column name="Payment_Payment_ID" id="6EEC6848-71CC-C119-486D-F429A69F2109">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7B6D01D-A42C-6A0C-B4A9-896FE9848DEE" name="Claim_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="3336DF2B-B1F2-9A1E-D883-861306778946"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7AD63399-4AF2-0B39-22B8-7BEE70F7AB77" name="Claim_Accident_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<generatorID>D71983D6-6E38-F597-D4C4-2C93BAF44EC9</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF171E83-CDFA-7574-AC08-0F62C31E26FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EF2EB140-4F79-149B-F8D0-11647999ED31" name="Claim_Payment_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:27:45 UTC</createdTime>
+<generatorID>4F0C66D0-19ED-7EB9-A126-B2CA747A18C8</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EEC6848-71CC-C119-486D-F429A69F2109"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0DCF8295-E11C-8EA2-DCA7-DF35504B33C6" name="Claim_Accident_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>61912C75-425D-CDEB-DD23-8BDD78959989</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF171E83-CDFA-7574-AC08-0F62C31E26FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

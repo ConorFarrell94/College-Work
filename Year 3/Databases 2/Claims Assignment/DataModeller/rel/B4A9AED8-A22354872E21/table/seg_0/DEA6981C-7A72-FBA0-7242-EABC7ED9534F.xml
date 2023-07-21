@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEA6981C-7A72-FBA0-7242-EABC7ED9534F" name="Expert">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>0C8FB219-6C16-34B1-2ACB-AEC21D3529ED</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Expert_ID" id="394CCE23-437A-28FE-64B1-7D8E15B167B7">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="E_NAME" id="BEA0F2B3-32E8-69E9-5CB9-6918771763F9">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>549F3554-F43F-6CAA-28AD-37E11EB6092F</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>32 CHAR</dataTypeSize>
+<ownDataTypeParameters>32 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="E_ADDR" id="3A927786-A481-C3A9-8708-E3D5948DED42">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>D81D6397-3A90-7637-D07F-8B6D1060F439</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="E_EXPERTISE" id="8D2DB427-6E6F-395D-1A71-C1EA2B70C2DD">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>462FCAFF-254B-C75C-0D6E-72BB6DEC3FDB</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>16 CHAR</dataTypeSize>
+<ownDataTypeParameters>16 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE16855F-6FBD-1634-2E2C-9C5BCE6D27F6" name="Expert_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="394CCE23-437A-28FE-64B1-7D8E15B167B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

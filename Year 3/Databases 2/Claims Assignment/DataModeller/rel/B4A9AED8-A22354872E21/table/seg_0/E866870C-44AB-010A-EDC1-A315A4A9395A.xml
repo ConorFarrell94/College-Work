@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E866870C-44AB-010A-EDC1-A315A4A9395A" name="ClaimExpert">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Expert_Expert_ID" id="C42226A4-664E-012A-3151-97618CCBC237">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="026602D0-AAC2-920E-CD6F-45792E267892" referredColumn="394CCE23-437A-28FE-64B1-7D8E15B167B7"/>
+</associations>
+</Column>
+<Column name="Claim_CL_KEY" id="A81B2769-CA26-9878-C1A7-5D5A58DB9CFC">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0DBC2D73-2A2A-F86D-5B3B-1B464CBAA642" referredColumn="3336DF2B-B1F2-9A1E-D883-861306778946"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1DA2CD45-B499-34B4-A144-0910A349B565" name="ClaimExpert_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<ownerDesignName>DataModeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C42226A4-664E-012A-3151-97618CCBC237"/>
+<colUsage columnID="A81B2769-CA26-9878-C1A7-5D5A58DB9CFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="51634694-68A1-391B-12EA-FAC7D8CA305C" name="ClaimExpert_Expert_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>E8005A01-2ED6-925F-8F1C-FE9CB586F49D</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C42226A4-664E-012A-3151-97618CCBC237"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8881A08A-2056-1190-AFF0-9429AE3B8F3E" name="ClaimExpert_Claim_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>E8005A01-2ED6-925F-8F1C-FE9CB586F49D</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A81B2769-CA26-9878-C1A7-5D5A58DB9CFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

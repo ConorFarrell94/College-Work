@@ -1,0 +1,27 @@
+security - 
+only postgres/db admin can make new roles
+Employees cant do anything other than select their individual views
+HR have access to all tables so as they can edit the details but they cant add new employees, only db admin can because to make a new employee you need to make a new ROLE which can be security risk
+
+auditing - pgadmin statistics tab
+
+performance - 
+
+backup/recovery/availability - 
+sudo nano backup_script.sh
+pg_dump humanresources > /usr/local/backup.sql
+
+chmod +x backup_script.sh
+
+0 2 * * 0 /path/to/backup_script.sh
+
+TO RESTORE TO A NEW DB
+pg_restore -C -d new_db backup.sql
+
+
+
+
+-- todo
+-- partition by year
+-- indexing
+--  in report, discuss row level security and how you WOULD have implemented it

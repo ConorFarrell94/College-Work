@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F33D7210-5BE4-15E7-8AB2-C1E1C8DBE197" name="EXPERTSREPORT">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:45:44 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EXRNO" id="F6AA21FA-C690-7FD3-DC3C-9B0CC76AFCC7">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:45:53 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EXRDATE" id="C9A8535E-1C40-0225-ED02-92015F51B54F">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:46:08 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EXRDESC" id="27627A9A-5383-07DE-4E07-E3114F04105F">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:46:28 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EXNO" id="33F48D68-5BFA-B645-8425-04A66F89D953">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:49:58 UTC</createdTime>
+<generatorID>E9AAF7EF-BDC8-85EC-7DB6-3DF3D6966108</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<referedAttribute>BF5B4723-CCA4-B2C0-CB98-D8020B4C1B36</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CLNO" id="C1B459F6-D254-C571-0AAE-5A41FB54E7A7">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:50:34 UTC</createdTime>
+<generatorID>7CDF2A81-810E-7174-495C-D4C5E1C71D70</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<referedAttribute>260E432A-83D0-7B4A-9845-586B2543B3A0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="75F76447-A7E5-3D3C-C01C-D0AA316CD30F" name="EXPERTSREPORT PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:46:07 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F6AA21FA-C690-7FD3-DC3C-9B0CC76AFCC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

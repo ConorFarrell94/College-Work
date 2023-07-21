@@ -1,0 +1,54 @@
+use ("Aviation");
+//db.city.count({})//count the rows
+//db.city.findOne();//just return one
+//db.city.find().sort({"Country":-1}).limit(1)//max value
+//db.city.find().sort({"Country":1}).limit(1)//min value
+db.city.find({"City":"Masvingo"},{});//specific value
+//db.city.find({"Country":"Zimbabwe"});
+//db.city.find({"airports.Name": /ferry/i })// i means case insensitive.
+//db.city.find({"airports.Name": {$regex: 'Ferry'}})
+//db.city.find({"City":"London"},{});
+//db.city.find(
+//     {"Country": "United Kingdom",
+//     "City":"London"
+//     },{
+//         "_id":0,
+//         "airports.Name":1,
+//         "Country":1}
+//         );
+//
+// Find all airports that have 'Ferry' in their name, using $regex
+//
+db.city.aggregate([{
+    $unwind:"$airports"},
+    {$match:{
+    "airports.Name": {$regex: "Ferry"},"Country":"United Kingdom"}},
+    {$project:{"_id":0,"Country":1, "City":1, "airports.Name":1}}]);
+//
+// Find all airports that have 'Ferry' in their name, using /  /i
+//
+db.city.aggregate([{
+    $unwind:"$airports"},
+    {$match:{
+    "airports.Name": /ferry/i,
+    "Country":"United Kingdom"
+    }
+    },
+    {$project:{"_id":0,"Country":1, "City":1, "airports.Name":1}}]);
+
+// db.city.aggregate([{
+//     $unwind:"$airports"},
+//     {$match:{
+//     "airports.Name": {$regex: "Station"},"Country":"United Kingdom"}},
+//     {$project:{"_id":0,"Country":1, "City":1, "airports.Name":1}}]);
+// db.city.aggregate([{
+//     $unwind:"$airports"},
+//     {$match:{
+//     "airports.Name": /station/i ,"Country":"United Kingdom"}},
+//     {$project:{"_id":0,"Country":1, "City":1, "airports.Name":1}}]);
+
+// db.city.updateMany(
+//     {},
+//     {$pull: {airports: {$elemMatch: {"airports.Name": /ferry/i}}}},
+//   { multi: true }
+// )

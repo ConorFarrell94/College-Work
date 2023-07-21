@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D90FCBF1-674A-3535-A9DC-A4E389C62023" containerWithKeyObject="B6A96CAE-7154-D530-08D6-9C7463EC69DA" localFKIndex="A4A56F83-36D2-0F85-2124-4903712E88EB" name="ExpertAccident_Expert_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:52:25 UTC</createdTime>
+<generatorID>F5EF12C6-129F-7E67-DD20-9224132A4BF8</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<referredTableLongName>Expert</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DEA6981C-7A72-FBA0-7242-EABC7ED9534F</referredTableID>
+<keyObject>EE16855F-6FBD-1634-2E2C-9C5BCE6D27F6</keyObject>
+<referredKeyID>EE16855F-6FBD-1634-2E2C-9C5BCE6D27F6</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Expert_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

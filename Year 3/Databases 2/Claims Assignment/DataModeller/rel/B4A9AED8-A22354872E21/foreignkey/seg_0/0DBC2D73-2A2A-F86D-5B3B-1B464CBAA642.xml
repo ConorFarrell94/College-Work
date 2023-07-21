@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0DBC2D73-2A2A-F86D-5B3B-1B464CBAA642" containerWithKeyObject="E866870C-44AB-010A-EDC1-A315A4A9395A" localFKIndex="8881A08A-2056-1190-AFF0-9429AE3B8F3E" name="ClaimExpert_Claim_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 15:39:27 UTC</createdTime>
+<generatorID>E8005A01-2ED6-925F-8F1C-FE9CB586F49D</generatorID>
+<ownerDesignName>DataModeller</ownerDesignName>
+<referredTableLongName>Claim</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>11CD413A-9BA0-050A-12D8-F9B0571A00C1</referredTableID>
+<keyObject>B7B6D01D-A42C-6A0C-B4A9-896FE9848DEE</keyObject>
+<referredKeyID>B7B6D01D-A42C-6A0C-B4A9-896FE9848DEE</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>CL_KEY</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

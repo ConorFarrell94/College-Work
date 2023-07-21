@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DFBD29D9-2763-914A-D515-188CE617DCD0" name="PAYMENTS">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>73E040FE-B32F-FBB3-6AC2-613F1C105548</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PAYMENT_NO" id="F25D4679-F8E6-A533-2CA7-5EC72E644D6A">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>92B50023-F982-8B6E-5750-4C1AD04F44CD</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_DATE" id="CE8B5FAF-491C-4E3F-681C-FBB75C7E1D2C">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>7CFC3285-3D12-12CE-0E9D-35BF9A9A6ED2</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_AMOUNT" id="B570CA3F-BE00-3DBD-ECEF-2633A83EEE12">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>566C2A59-DB7F-21E7-DB3A-A10867D17282</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="P_REASON" id="4345E18A-DA9B-E99A-CD81-A3ABDE30C5CB">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>C0B4C78C-BA05-A299-00BD-1479E8E55C12</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CHEQUENO" id="9D9D6F9A-1A60-F0A2-1733-8CEE5D119C0E">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>2A9EEA8C-DC44-397E-D47B-0B2233D731F7</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93E8E58A-9C39-9E92-B751-26D41F99B754" name="PAYMENTS_PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>16A4E62B-B96E-E3C8-1DC4-DC5C6EBB101F</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F25D4679-F8E6-A533-2CA7-5EC72E644D6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="11FBAB63-28F6-1EE8-4DB7-B07970A3D0EC" name="STAFF">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:12:18 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="STAFF_NO" id="687F991A-0668-9313-44A3-58EFE91CDF85">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:12:29 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STAFF_NAME" id="4E92B4F2-32CF-8EC2-8712-034EC1B24F24">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:12:43 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STAFF_ROLE" id="2A0CFD9A-FDDC-A00D-E033-E213DBD9497E">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:12:53 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A6195E76-D28C-29EA-C5DB-4D98C503F4CC" name="STAFF PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:14:40 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>687F991A-0668-9313-44A3-58EFE91CDF85</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

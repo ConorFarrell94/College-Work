@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="73E040FE-B32F-FBB3-6AC2-613F1C105548" name="PAYMENTS">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:23:26 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PAYMENT_NO" id="92B50023-F982-8B6E-5750-4C1AD04F44CD">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:23:32 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_DATE" id="7CFC3285-3D12-12CE-0E9D-35BF9A9A6ED2">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:23:44 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_AMOUNT" id="566C2A59-DB7F-21E7-DB3A-A10867D17282">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:23:57 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_REASON" id="C0B4C78C-BA05-A299-00BD-1479E8E55C12">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:24:10 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CHEQUENO" id="2A9EEA8C-DC44-397E-D47B-0B2233D731F7">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:24:18 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="16A4E62B-B96E-E3C8-1DC4-DC5C6EBB101F" name="PAYMENTS PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:23:42 UTC</createdTime>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<engineerTo>
+<item key="CA324FAC-A259-0598-50C7-7EA4A4080D37" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>92B50023-F982-8B6E-5750-4C1AD04F44CD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

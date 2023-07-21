@@ -1,0 +1,21 @@
+use ("BookShop");
+
+db.bookorder.find();
+db.bookorder.find({},{"custname":1});
+db.bookorder.find({},{"_id":0,"orderno":1, "books.Title":1});
+db.bookorder.find({},{});
+db.bookorder.find({"orderno":54451},{});
+
+db.bookorder.find(
+   {"books.cover":"yes"},
+   {"_id":0, "orderno":1, "books.Title":1, "books.cover":1 });
+db.bookorder.aggregate([{
+    $unwind:"$books"},
+    {$match:{"books.cover":"yes"}},
+    {$project:{"_id":0,"orderno":1, "books.Title":1, "books.cover":1}}]);
+db.bookorder.aggregate([{
+    $unwind:"$books"},
+    {$match:{"books.cover":"yes"}},
+    {$project:{"_id":0,"orderno":1, "books.Title":1}}]);
+
+db.bookorder.findOne();

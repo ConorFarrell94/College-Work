@@ -1,0 +1,7 @@
+In this example, the is_prime() function takes a number n and a parameter k as input. The function first checks if the number is small and either 2 or 3, in which case it returns True (since those numbers are prime by definition). If the number is 1 or is even, it returns False (since 1 is not prime and even numbers are not prime except for 2).
+
+Next, the function uses a loop to find the largest power of 2 that divides n - 1. This value is stored in the s and d variables.
+
+Then, the function uses a loop to test the number k times. For each iteration, it generates a random number a between 2 and n - 1 (inclusive), and then uses the pow() function to calculate a^d mod n. If this value is not 1 or n - 1, it uses another loop to test if x is a non-trivial square root of 1 modulo n. If it finds such a value, it returns False (since this indicates that the number is not prime).
+
+If the number passes all of these tests, the function returns True, indicating that it is likely to be prime. The likelihood of a false positive (a composite number being reported as prime) can be controlled by adjusting the k parameter. A larger value of k will increase the number of tests and reduce the likelihood of a false positive, but it will also increase the runtime of the algorithm.

@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABEBE3CC-2345-33EA-F938-692B1A98C188" name="Payment">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:40:42 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="PAYMENT_NO" id="4EEADD62-94A2-C38F-46F7-09B5D8A9A7CD">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:41:05 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_DATE" id="308D6B5F-6122-BD51-E6BA-D965DF119333">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:41:27 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_AMOUNT" id="83D18BEB-6188-F8A4-D9EB-2C7031F92C48">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:41:57 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="P_REASON" id="1487D0DB-FBE7-E935-FFC2-4B96D2A2F08F">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:43:10 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CHEQUENO" id="104F6FC1-CAE4-AC72-12D1-B545AA7AA0F1">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:43:41 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<engineerTo>
+<item key="B4A9AED8-6A60-0DD6-1C00-A22354872E21" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

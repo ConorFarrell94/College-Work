@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="39AD4C58-FA47-C06E-FCEE-D1889C4DC0C4" name="STAFF">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>11FBAB63-28F6-1EE8-4DB7-B07970A3D0EC</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="STAFF_NO" id="7C7BD80D-1A63-6F0D-E706-F634571025BF">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>687F991A-0668-9313-44A3-58EFE91CDF85</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STAFF_NAME" id="9EC232CC-4D28-3D79-2AAA-9345E793EAFC">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>4E92B4F2-32CF-8EC2-8712-034EC1B24F24</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STAFF_ROLE" id="8C91BC8F-49EA-E391-07CD-E34797044625">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>2A0CFD9A-FDDC-A00D-E033-E213DBD9497E</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CF6C6D89-03E9-F224-905F-38DB600D0038" name="STAFF_PK">
+<createdBy>C19704439</createdBy>
+<createdTime>2021-11-03 13:51:34 UTC</createdTime>
+<generatorID>A6195E76-D28C-29EA-C5DB-4D98C503F4CC</generatorID>
+<ownerDesignName>claims datamodeller</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C7BD80D-1A63-6F0D-E706-F634571025BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

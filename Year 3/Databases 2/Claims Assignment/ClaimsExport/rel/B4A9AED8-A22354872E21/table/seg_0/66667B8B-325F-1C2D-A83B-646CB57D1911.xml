@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="66667B8B-325F-1C2D-A83B-646CB57D1911" name="Report">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>1FD9E9DC-16FB-2955-5785-D8E9B53CE1A6</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REPORT_KEY" id="5FA6C6CC-EC1D-93CC-0F00-E72B6BEF4573">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-08 13:26:00 UTC</createdTime>
+<generatorID>19A45EBD-D1A0-BDD6-DE7D-7112CA7B1B61</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATEREQUESTED" id="3CD9A0AF-A13F-6728-CCF9-707E9CABFF56">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>2E8170C8-D48F-2795-C4AD-65FDECE6C947</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATESUBMITTED" id="B98C7382-9611-C2C4-23FE-F0BAB79A57E7">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>5429F89C-3FA3-2A69-FF8B-174ADB6542CD</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REPORTCONTENT" id="03F39D3A-5A1C-0C19-AE4C-3BB4A79300CF">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:45:52 UTC</createdTime>
+<generatorID>65FCB253-3896-3BBD-2E16-4A2A61D8474B</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512 CHAR</dataTypeSize>
+<ownDataTypeParameters>512 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Expert_Expert_ID" id="2D83981E-3BE6-A843-BD6F-47E877BDEEE4">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:54:50 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="595DD026-2331-4FB5-A7CB-41E3B090797F" referredColumn="394CCE23-437A-28FE-64B1-7D8E15B167B7"/>
+</associations>
+</Column>
+<Column name="Claim_Claim_ID" id="421A1B38-F3DC-2942-EAEA-6E9761A4B53C">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-08 13:26:00 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="085780C6-95CA-0685-72AF-1F0CBC07502A" referredColumn="3336DF2B-B1F2-9A1E-D883-861306778946"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18806B6A-AA74-098B-3572-FE6503F5271A" name="Report_PK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-08 13:29:55 UTC</createdTime>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5FA6C6CC-EC1D-93CC-0F00-E72B6BEF4573"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F5B949CC-05E4-1DF4-49B8-B7A4123FE0B8" name="Report_Expert_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-03 14:54:50 UTC</createdTime>
+<generatorID>299E5979-4C4E-C169-16BD-230D8C2021E1</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D83981E-3BE6-A843-BD6F-47E877BDEEE4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6588E0B7-CEB5-A7D8-137B-6A58BF8D413B" name="Report_Claim_FK">
+<createdBy>saul</createdBy>
+<createdTime>2021-11-08 13:26:00 UTC</createdTime>
+<generatorID>9B917652-E48F-10BB-DEBB-D5E91C4CE6D6</generatorID>
+<ownerDesignName>ClaimsExport</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="421A1B38-F3DC-2942-EAEA-6E9761A4B53C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="F0BC0365-168F-863B-BA7E-C48893380A3E" containerWithKeyObject="D775DAD3-DB96-2A1B-96DC-341EC698A091" localFKIndex="E63CD603-937A-8874-2897-87B58688CA9E" name="CLAIM_TO_EXPERT_EXPERTS_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>7CCD0930-D30C-01DA-957A-08F0B9D2CA14</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<referredTableLongName>EXPERTS</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A1666572-173E-F146-09A9-EFA2CC37D4CA</referredTableID>
+<keyObject>DDDE190F-4F39-55A1-2A56-88F25400FDA2</keyObject>
+<referredKeyID>DDDE190F-4F39-55A1-2A56-88F25400FDA2</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>EXNO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

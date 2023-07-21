@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="EXPERT_TO_REPORT" directorySegmentName="seg_0" id="E9AAF7EF-BDC8-85EC-7DB6-3DF3D6966108">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:49:58 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<engineerTo>
+<item key="974E9B7F-6F83-4101-41CE-032103BAACF9" value="true"/>
+</engineerTo>
+<sourcePk>BCB29F81-183C-3A90-8FBA-2356B67674F6</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1FCB5F17-A73C-5BED-8AEF-71E6ED1B2B73</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F33D7210-5BE4-15E7-8AB2-C1E1C8DBE197</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

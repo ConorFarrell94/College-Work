@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D775DAD3-DB96-2A1B-96DC-341EC698A091" name="CLAIM_TO_EXPERT">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="CLAIM_CLNO" id="7EC42E91-BB4A-68CF-7463-70B3AECBEB2E">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9C332E2D-2E3A-8876-FC7A-5CECD92371EA" referredColumn="717B88D6-81F3-38D9-CABD-AC19A094447A"/>
+</associations>
+</Column>
+<Column name="EXPERTS_EXNO" id="735BC7AE-E387-B571-741F-A1BD338BB602">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F0BC0365-168F-863B-BA7E-C48893380A3E" referredColumn="DF7E86DC-C111-AFF1-9322-0DB72438328A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="158D8523-1938-FC90-78FC-2666884F500C" name="CLAIM_TO_EXPERT_PK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<ownerDesignName>MODELLER</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EC42E91-BB4A-68CF-7463-70B3AECBEB2E"/>
+<colUsage columnID="735BC7AE-E387-B571-741F-A1BD338BB602"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A76C9B86-47BF-97E3-9777-A805F42C5443" name="CLAIM_TO_EXPERT_CLAIM_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>7CCD0930-D30C-01DA-957A-08F0B9D2CA14</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7EC42E91-BB4A-68CF-7463-70B3AECBEB2E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E63CD603-937A-8874-2897-87B58688CA9E" name="CLAIM_TO_EXPERT_EXPERTS_FK">
+<createdBy>Conor</createdBy>
+<createdTime>2021-11-08 23:51:13 UTC</createdTime>
+<generatorID>7CCD0930-D30C-01DA-957A-08F0B9D2CA14</generatorID>
+<ownerDesignName>MODELLER</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="735BC7AE-E387-B571-741F-A1BD338BB602"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
